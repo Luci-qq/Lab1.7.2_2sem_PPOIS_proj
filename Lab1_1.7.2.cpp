@@ -56,7 +56,17 @@ public:
 		mtrx[y_index][x_index] = elm;
 		return;
 	}
+
+
 };
+
+bool check_mtrx_multiplication_possibility(Mtrx&left,Mtrx &right)
+{
+	if (left.get_y_size() == right.get_x_size())
+		return true;
+	else
+		return false;
+}
 
 const Mtrx operator+(Mtrx& left, Mtrx& right)
 {
@@ -152,6 +162,18 @@ const void operator-=(Mtrx& left, float addition_value)
 			left.set_elm_by_index(x, y, set_elm);
 		}
 	return;
+}
+
+const Mtrx operator*(Mtrx&left,Mtrx&right)
+{
+	if (check_mtrx_multiplication_possibility(left, right))
+	{
+		Mtrx result_mtrx;
+		vector<float> result_values;
+		
+	}
+	else
+		std::cout << "Operation impossible!";
 }
 
 int main()

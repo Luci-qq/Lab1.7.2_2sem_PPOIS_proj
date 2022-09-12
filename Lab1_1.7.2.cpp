@@ -57,15 +57,31 @@ public:
 		return;
 	}
 
+	vector<float> get_line_by_index(int y_index)
+	{
+		return mtrx[y_index];
+	}
+
+	vector<float> get_column_by_index(int x_index)
+	{
+		vector<float> column;
+		for (int y = 0; y < get_y_size(); ++y)
+		{
+			column.push_back(mtrx[y][x_index]);
+		}
+		return column;
+	}
 
 };
 
-bool check_mtrx_multiplication_possibility(Mtrx&left,Mtrx &right)
+int check_mtrx_multiplication_possibility(Mtrx&left,Mtrx &right)
 {
 	if (left.get_y_size() == right.get_x_size())
-		return true;
+		return 1;
+	else if (left.get_x_size() == right.get_y_size())
+		return 2;
 	else
-		return false;
+		return 0;
 }
 
 const Mtrx operator+(Mtrx& left, Mtrx& right)
@@ -166,27 +182,46 @@ const void operator-=(Mtrx& left, float addition_value)
 
 const Mtrx operator*(Mtrx&left,Mtrx&right)
 {
-	if (check_mtrx_multiplication_possibility(left, right))
-	{
-		Mtrx result_mtrx;
-		vector<float> result_values;
-		
-	}
-	else
-		std::cout << "Operation impossible!";
+	if(check_mtrx_multiplication_possibility(left,right)==2)
+		std::swap(left, right);
+	Mtrx result_mtrx;
+	vector<float> result_values;
+	vector <float> tmp_line, tmp_column;
+	float result_value = 0;
+	for (int y = 0; y < left.get_x_size(); ++y) {
+			for (int x = 0; x < right.get_y_size(); ++x)
+			{
+				tmp_line = left.get_line_by_index(y);
+				tmp_column = right.get_column_by_index(x);
+				for (int j = 0; j < tmp_line.size(); ++j)
+				{
+					if (j > tmp_column.size()-1 && j > tmp_line.size()-1)
+						break;
+					result_value += tmp_line[j] * tmp_column[j];
+				}
+				result_values.push_back(result_value);
+				result_value = 0;
+			}
+		}
+	result_mtrx.init(result_values, left.get_x_size(),right.get_y_size() );
+	return result_mtrx;
 }
 
 int main()
 {
-	vector<float> test = { 2,3,4,5,1,2,3,4,5,6,7,8 };
+	vector<float> test = {1,2,3,4,9,10,11,3};
+	vector<float> test1 = {1,8,10,12,34,2,11,93,45,11,34,100};
 	Mtrx m;
-	m.init(test, 4, 3);
+	m.init(test, 4, 2);
 	Mtrx m1;
-	m1.init(test, 4, 3);
+	m1.init(test1, 3, 4);
 	m.print_mtrx();
 	std::cout << std::endl;
-	m -= 1000;
-	m.print_mtrx();
+	m1.print_mtrx();
+	std::cout << std::endl;
+	Mtrx m2;
+	m2 = m * m1;
+	m2.print_mtrx();
 	std::cout << std::endl;
 	return 0;
 }

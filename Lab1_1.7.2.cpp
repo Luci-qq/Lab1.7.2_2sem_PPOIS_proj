@@ -74,27 +74,18 @@ public:
 
 };
 
-int check_mtrx_multiplication_possibility(Mtrx&left,Mtrx &right)
-{
-	if (left.get_y_size() == right.get_x_size())
-		return 1;
-	else if (left.get_x_size() == right.get_y_size())
-		return 2;
-	else
-		return 0;
-}
-
+//mtrx sum
 const Mtrx operator+(Mtrx& left, Mtrx& right)
 {
-	Mtrx result_mtrx;
+	Mtrx sum_res;
 	vector<float> result_values;
 	for (int y = 0; y < left.get_y_size(); ++y)
 		for (int x = 0; x < left.get_x_size(); ++x)
 		{
 			result_values.push_back(left.get_elm_by_index(x, y) + right.get_elm_by_index(x, y));
 		}
-	result_mtrx.init(result_values, left.get_x_size(), right.get_y_size());
-	return result_mtrx;
+	sum_res.init(result_values, left.get_x_size(), right.get_y_size());
+	return sum_res;
 }
 
 const void operator+=(Mtrx& left, Mtrx& right)
@@ -107,18 +98,18 @@ const void operator+=(Mtrx& left, Mtrx& right)
 		}
 	return;
 }
-
+//mtrx difference
 const Mtrx operator-(Mtrx& left, Mtrx& right)
 {
-	Mtrx result_mtrx;
+	Mtrx difference_res;
 	vector<float> result_values;
 	for (int y = 0; y < left.get_y_size(); ++y)
 		for (int x = 0; x < left.get_x_size(); ++x)
 		{
 			result_values.push_back(left.get_elm_by_index(x, y) - right.get_elm_by_index(x, y));
 		}
-	result_mtrx.init(result_values, left.get_x_size(), right.get_y_size());
-	return result_mtrx;
+	difference_res.init(result_values, left.get_x_size(), right.get_y_size());
+	return difference_res;
 }
 
 const void operator-=(Mtrx& left, Mtrx& right)
@@ -131,18 +122,18 @@ const void operator-=(Mtrx& left, Mtrx& right)
 		}
 	return;
 }
-
+//mtrx sum with number
 const Mtrx operator+(Mtrx& left, float addition_value)
 {
-	Mtrx result_mtrx;
+	Mtrx sum_res;
 	vector<float> result_values;
 	for (int y = 0; y < left.get_y_size(); ++y)
 		for (int x = 0; x < left.get_x_size(); ++x)
 		{
 			result_values.push_back(left.get_elm_by_index(x, y) + addition_value);
 		}
-	result_mtrx.init(result_values, left.get_x_size(), left.get_y_size());
-	return result_mtrx;
+	sum_res.init(result_values, left.get_x_size(), left.get_y_size());
+	return sum_res;
 }
 
 const void operator+=(Mtrx& left, float addition_value)
@@ -155,18 +146,18 @@ const void operator+=(Mtrx& left, float addition_value)
 		}
 	return;
 }
-
+//mtrx difference by number
 const Mtrx operator-(Mtrx& left, float difference_value)
 {
-	Mtrx result_mtrx;
+	Mtrx difference_res;
 	vector<float> result_values;
 	for (int y = 0; y < left.get_y_size(); ++y)
 		for (int x = 0; x < left.get_x_size(); ++x)
 		{
 			result_values.push_back(left.get_elm_by_index(x, y) - difference_value);
 		}
-	result_mtrx.init(result_values, left.get_x_size(), left.get_y_size());
-	return result_mtrx;
+	difference_res.init(result_values, left.get_x_size(), left.get_y_size());
+	return difference_res;
 }
 
 const void operator-=(Mtrx& left, float addition_value)
@@ -179,48 +170,45 @@ const void operator-=(Mtrx& left, float addition_value)
 		}
 	return;
 }
-
+//mtrx multiplication
 const Mtrx operator*(Mtrx&left,Mtrx&right)
 {
-	if(check_mtrx_multiplication_possibility(left,right)==2)
-		std::swap(left, right);
-	Mtrx result_mtrx;
+	Mtrx multiplication_res;
 	vector<float> result_values;
-	vector <float> tmp_line, tmp_column;
-	float result_value = 0;
-	for (int y = 0; y < left.get_x_size(); ++y) {
-			for (int x = 0; x < right.get_y_size(); ++x)
+	float tmp_res=0;
+	int r1, c1, r2, c2;
+	if (left.get_x_size() > right.get_x_size())
+		c1 = left.get_x_size();
+	else
+		c1 = right.get_x_size();
+	if (right.get_y_size() > left.get_y_size())
+		r1 = right.get_y_size();
+	else
+		r1 = left.get_y_size();
+	for (int i = 0; i < c1; ++i)
+		for (int j = 0; j < r1; ++j)
+			for (int k = 0; k < c1; ++k)
 			{
-				tmp_line = left.get_line_by_index(y);
-				tmp_column = right.get_column_by_index(x);
-				for (int j = 0; j < tmp_line.size(); ++j)
-				{
-					if (j > tmp_column.size()-1 && j > tmp_line.size()-1)
-						break;
-					result_value += tmp_line[j] * tmp_column[j];
-				}
-				result_values.push_back(result_value);
-				result_value = 0;
+				result_values.push_back(left.get_elm_by_index(i,k) * right.get_elm_by_index(k,j));
 			}
-		}
-	result_mtrx.init(result_values, left.get_x_size(),right.get_y_size() );
-	return result_mtrx;
+	multiplication_res.init(result_values, left.get_x_size(), right.get_y_size());
+	return multiplication_res;
 }
 
 int main()
 {
-	vector<float> test = {1,2,3,4,9,10,11,3};
-	vector<float> test1 = {1,8,10,12,34,2,11,93,45,11,34,100};
+	vector<float> test = {1,2,3,4,5,6};
+	vector<float> test1 = {1,8,10,12,12,15};
 	Mtrx m;
-	m.init(test, 4, 2);
+	m.init(test, 2, 3);
 	Mtrx m1;
-	m1.init(test1, 3, 4);
+	m1.init(test1, 3,2);
 	m.print_mtrx();
 	std::cout << std::endl;
 	m1.print_mtrx();
 	std::cout << std::endl;
 	Mtrx m2;
-	m2 = m * m1;
+	m2 = m1 * m;
 	m2.print_mtrx();
 	std::cout << std::endl;
 	return 0;

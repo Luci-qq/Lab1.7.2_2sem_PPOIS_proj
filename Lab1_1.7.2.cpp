@@ -5,10 +5,11 @@ using std::vector;
 class Mtrx
 {
 private:
+
 	vector<vector<float>> mtrx;
 public:
 
-	void init(const vector<float>& input_values, const int& size_x, const int& size_y)
+	void init(const vector<float>& input_values, const int& size_y, const int& size_x)
 	{
 		vector<float> tmp_vector;
 		tmp_vector.resize(size_x);
@@ -98,6 +99,7 @@ const void operator+=(Mtrx& left, Mtrx& right)
 		}
 	return;
 }
+
 //mtrx difference
 const Mtrx operator-(Mtrx& left, Mtrx& right)
 {
@@ -122,6 +124,7 @@ const void operator-=(Mtrx& left, Mtrx& right)
 		}
 	return;
 }
+
 //mtrx sum with number
 const Mtrx operator+(Mtrx& left, float addition_value)
 {
@@ -146,6 +149,7 @@ const void operator+=(Mtrx& left, float addition_value)
 		}
 	return;
 }
+
 //mtrx difference by number
 const Mtrx operator-(Mtrx& left, float difference_value)
 {
@@ -170,45 +174,50 @@ const void operator-=(Mtrx& left, float addition_value)
 		}
 	return;
 }
+
 //mtrx multiplication
 const Mtrx operator*(Mtrx&left,Mtrx&right)
 {
 	Mtrx multiplication_res;
+	float tmp_res = 0;
 	vector<float> result_values;
-	float tmp_res=0;
-	int r1, c1, r2, c2;
-	if (left.get_x_size() > right.get_x_size())
-		c1 = left.get_x_size();
-	else
-		c1 = right.get_x_size();
-	if (right.get_y_size() > left.get_y_size())
-		r1 = right.get_y_size();
-	else
-		r1 = left.get_y_size();
-	for (int i = 0; i < c1; ++i)
-		for (int j = 0; j < r1; ++j)
-			for (int k = 0; k < c1; ++k)
+	vector<vector<float>> tmp_left_mtrx;
+	vector<vector<float>> tmp_right_mtrx;
+	for (int y = 0; y < left.get_y_size(); ++y)
+		tmp_left_mtrx.push_back(left.get_line_by_index(y));
+	for (int x = 0; x < right.get_x_size(); ++x)
+		tmp_right_mtrx.push_back(right.get_column_by_index(x));
+	for (int i = 0; i < tmp_left_mtrx.size(); ++i)
+	{
+		for (int j = 0; j < tmp_right_mtrx.size(); ++j)
+		{
+			tmp_res = 0;
+			for (int z = 0; z < tmp_right_mtrx[j].size(); ++z)
 			{
-				result_values.push_back(left.get_elm_by_index(i,k) * right.get_elm_by_index(k,j));
+				tmp_res += tmp_left_mtrx[i][z] * tmp_right_mtrx[j][z];
 			}
-	multiplication_res.init(result_values, left.get_x_size(), right.get_y_size());
+			result_values.push_back(tmp_res);
+		}
+	}
+	multiplication_res.init(result_values, left.get_y_size(), right.get_x_size());
 	return multiplication_res;
+
 }
 
 int main()
 {
-	vector<float> test = {1,2,3,4,5,6};
-	vector<float> test1 = {1,8,10,12,12,15};
+	vector<float> test = {4,5,10,12};
+	vector<float> test1 = {2,3,-9,0};
 	Mtrx m;
-	m.init(test, 2, 3);
+	m.init(test1, 2, 2);
 	Mtrx m1;
-	m1.init(test1, 3,2);
+	m1.init(test, 2,2);
 	m.print_mtrx();
 	std::cout << std::endl;
 	m1.print_mtrx();
 	std::cout << std::endl;
 	Mtrx m2;
-	m2 = m1 * m;
+	m2 = m * m1;
 	m2.print_mtrx();
 	std::cout << std::endl;
 	return 0;

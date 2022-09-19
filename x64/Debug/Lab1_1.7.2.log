@@ -1,6 +1,4 @@
 ﻿  Lab1_1.7.2.cpp
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(41,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(46,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(179,14): warning C4101: r2: неиспользованная локальная переменная
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(179,18): warning C4101: c2: неиспользованная локальная переменная
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(42,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(47,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
   Lab1_1.7.2.vcxproj -> D:\university\Lab1.7.2_2sem_PPOIS_proj\x64\Debug\Lab1_1.7.2.exe

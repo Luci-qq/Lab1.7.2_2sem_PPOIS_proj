@@ -2,10 +2,10 @@
 #include <vector>
 using std::vector;
 
+//main Mtrx class
 class Mtrx
 {
 private:
-
 	vector<vector<float>> mtrx;
 public:
 
@@ -47,7 +47,7 @@ public:
 		return mtrx[0].size();
 	}
 
-	float get_elm_by_index(int& x_index, int& y_index)
+	float get_elm_by_index(int x_index, int y_index)
 	{
 		return mtrx[y_index][x_index];
 	}
@@ -75,7 +75,7 @@ public:
 
 };
 
-//mtrx sum
+//mtrx sum+
 const Mtrx operator+(Mtrx& left, Mtrx& right)
 {
 	Mtrx sum_res;
@@ -88,7 +88,7 @@ const Mtrx operator+(Mtrx& left, Mtrx& right)
 	sum_res.init(result_values, left.get_x_size(), right.get_y_size());
 	return sum_res;
 }
-
+//mtrx sum+=
 const void operator+=(Mtrx& left, Mtrx& right)
 {
 	for (int y = 0; y < left.get_y_size(); ++y)
@@ -99,8 +99,7 @@ const void operator+=(Mtrx& left, Mtrx& right)
 		}
 	return;
 }
-
-//mtrx difference
+//mtrx difference-
 const Mtrx operator-(Mtrx& left, Mtrx& right)
 {
 	Mtrx difference_res;
@@ -113,7 +112,7 @@ const Mtrx operator-(Mtrx& left, Mtrx& right)
 	difference_res.init(result_values, left.get_x_size(), right.get_y_size());
 	return difference_res;
 }
-
+//mtrx difference-=
 const void operator-=(Mtrx& left, Mtrx& right)
 {
 	for (int y = 0; y < left.get_y_size(); ++y)
@@ -124,8 +123,7 @@ const void operator-=(Mtrx& left, Mtrx& right)
 		}
 	return;
 }
-
-//mtrx sum with number
+//mtrx sum+(number)
 const Mtrx operator+(Mtrx& left, float addition_value)
 {
 	Mtrx sum_res;
@@ -138,7 +136,7 @@ const Mtrx operator+(Mtrx& left, float addition_value)
 	sum_res.init(result_values, left.get_x_size(), left.get_y_size());
 	return sum_res;
 }
-
+//mtrx sum+=(number)
 const void operator+=(Mtrx& left, float addition_value)
 {
 	for (int y = 0; y < left.get_y_size(); ++y)
@@ -149,8 +147,7 @@ const void operator+=(Mtrx& left, float addition_value)
 		}
 	return;
 }
-
-//mtrx difference by number
+//mtrx difference-(number)
 const Mtrx operator-(Mtrx& left, float difference_value)
 {
 	Mtrx difference_res;
@@ -163,7 +160,7 @@ const Mtrx operator-(Mtrx& left, float difference_value)
 	difference_res.init(result_values, left.get_x_size(), left.get_y_size());
 	return difference_res;
 }
-
+//mtrx difference-=(number)
 const void operator-=(Mtrx& left, float addition_value)
 {
 	for (int y = 0; y < left.get_y_size(); ++y)
@@ -174,8 +171,15 @@ const void operator-=(Mtrx& left, float addition_value)
 		}
 	return;
 }
-
-//mtrx multiplication
+//check mtrx rows and columns(possibility for multiplying)
+bool check_multiplication_possibility(Mtrx &left, Mtrx &right)
+{
+	if (left.get_y_size() == right.get_x_size())
+		return true;
+	else
+		return false;
+}
+//mtrx multiplication*
 const Mtrx operator*(Mtrx&left,Mtrx&right)
 {
 	Mtrx multiplication_res;
@@ -201,24 +205,111 @@ const Mtrx operator*(Mtrx&left,Mtrx&right)
 	}
 	multiplication_res.init(result_values, left.get_y_size(), right.get_x_size());
 	return multiplication_res;
-
 }
-
+//mtrx multiplication*(number)
+const Mtrx operator*(Mtrx& left, float multiplication_value)
+{
+	Mtrx difference_res;
+	vector<float> result_values;
+	for (int y = 0; y < left.get_y_size(); ++y)
+		for (int x = 0; x < left.get_x_size(); ++x)
+		{
+			result_values.push_back(left.get_elm_by_index(x, y) * multiplication_value);
+		}
+	difference_res.init(result_values, left.get_x_size(), left.get_y_size());
+	return difference_res;
+}
+//mtrx multiplication*=(number)
+const void operator*=(Mtrx&left, float multiplication_value)
+{
+	for (int y = 0; y < left.get_y_size(); ++y)
+		for (int x = 0; x < left.get_x_size(); ++x)
+		{
+			float set_elm = left.get_elm_by_index(x, y) * multiplication_value;
+			left.set_elm_by_index(x, y, set_elm);
+		}
+	return;
+}
+//mtrx division/(number)
+const Mtrx operator/(Mtrx& left, float division_value)
+{
+	Mtrx difference_res;
+	vector<float> result_values;
+	for (int y = 0; y < left.get_y_size(); ++y)
+		for (int x = 0; x < left.get_x_size(); ++x)
+		{
+			result_values.push_back(left.get_elm_by_index(x, y) / division_value);
+		}
+	difference_res.init(result_values, left.get_x_size(), left.get_y_size());
+	return difference_res;
+}
+//mtrx multiplication*=(number)
+const void operator/=(Mtrx& left, float division_value)
+{
+	for (int y = 0; y < left.get_y_size(); ++y)
+		for (int x = 0; x < left.get_x_size(); ++x)
+		{
+			float set_elm = left.get_elm_by_index(x, y) / division_value;
+			left.set_elm_by_index(x, y, set_elm);
+		}
+	return;
+}
+//mtrx involution^
+const Mtrx operator^(Mtrx&left,int involution_value)
+{
+	Mtrx res_mtrx;
+	Mtrx tmp_mtrx = left;
+	for (int i = 1; i < involution_value; ++i)
+	{
+		res_mtrx = tmp_mtrx * left;
+		tmp_mtrx = res_mtrx;
+	}
+	return res_mtrx;
+}
+//mtrx involution^=
+const void operator^=(Mtrx& left, int involution_value)
+{
+	Mtrx res_mtrx;
+	Mtrx tmp_mtrx = left;
+	for (int i = 1; i < involution_value; ++i)
+	{
+		res_mtrx = tmp_mtrx * left;
+		tmp_mtrx = res_mtrx;
+	}
+	left = res_mtrx;
+}
+//mtrx determinate
+int determinant(Mtrx&left) {
+	int det = 0;
+	int submatrix[10][10];
+	if (left.get_x_size() == 2 && left.get_y_size() == 2)
+		return ((left.get_elm_by_index(0,0) * left.get_elm_by_index(1,1)) - (left.get_elm_by_index(1,0) * left.get_elm_by_index(0,1)));
+	else {
+		for (int x = 0; x < n; x++) {
+			int subi = 0;
+			for (int i = 1; i < n; i++) {
+				int subj = 0;
+				for (int j = 0; j < n; j++) {
+					if (j == x)
+						continue;
+					submatrix[subi][subj] = matrix[i][j];
+					subj++;
+				}
+				subi++;
+			}
+			det = det + (pow(-1, x) * matrix[0][x] * determinant(submatrix, n - 1));
+		}
+	}
+	return det;
+}
 int main()
 {
-	vector<float> test = {4,5,10,12};
-	vector<float> test1 = {2,3,-9,0};
+	vector<float> test = {4,5,10};
+	vector<float> test1 = {1,2,3,4,5,6,7,8,9};
 	Mtrx m;
-	m.init(test1, 2, 2);
-	Mtrx m1;
-	m1.init(test, 2,2);
+	m.init(test1, 3,3);
+	m^=5;
 	m.print_mtrx();
-	std::cout << std::endl;
-	m1.print_mtrx();
-	std::cout << std::endl;
-	Mtrx m2;
-	m2 = m * m1;
-	m2.print_mtrx();
 	std::cout << std::endl;
 	return 0;
 }

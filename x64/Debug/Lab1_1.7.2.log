@@ -1,4 +1,4 @@
 ﻿  Lab1_1.7.2.cpp
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(42,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(47,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
-  Lab1_1.7.2.vcxproj -> D:\university\Lab1.7.2_2sem_PPOIS_proj\x64\Debug\Lab1_1.7.2.exe
+D:\vs_projects\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(43,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\vs_projects\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(48,1): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+  Lab1_1.7.2.vcxproj -> D:\vs_projects\Lab1.7.2_2sem_PPOIS_proj\x64\Debug\Lab1_1.7.2.exe

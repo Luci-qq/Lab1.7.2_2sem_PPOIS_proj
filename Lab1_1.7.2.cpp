@@ -1,399 +1,49 @@
 ﻿#include <iostream>
 #include <vector>
+#include "MtrxHeader.h"
+#include "InputLibHeader.h"
 using std::vector;
 
-//main Mtrx class
-class Mtrx
+void setup_console()
 {
-private:
-	vector<vector<float>> mtrx;
+	setlocale(LC_ALL, "Russian");
+	system("chcp 1251");
+	system("cls");
+}
 
-	float determinant_utility(vector<vector<float>>& mtrx, int mtrx_size) {
-		float determinant = 0;
-		if (mtrx_size == 1) {
-			return mtrx[0][0];
-		}
-		if (mtrx_size == 2) {
-			return (mtrx[0][0] * mtrx[1][1]) - (mtrx[0][1] * mtrx[1][0]);
-		}
-		vector<vector<float>> temp(mtrx_size, vector<float>(mtrx_size));
-		int sign = 1;
-		for (int i = 0; i < mtrx_size; i++) {
-			subMatrix(mtrx, temp, 0, i, mtrx_size);
-			determinant += sign * mtrx[0][i] * determinant_utility(temp, mtrx_size - 1);
-			sign = -sign;
-		}
-		return determinant;
-	}
-
-	void subMatrix(vector<vector<float>>& mtrx, vector<vector<float>>& temp, int p, int q, int n) {
-		int i = 0, j = 0;
-		// filling the sub matrix
-		for (int row = 0; row < n; ++row) {
-			for (int col = 0; col < n; ++col) {
-				// skipping if the current row or column is not equal to the current
-				// element row and column
-				if (row != p && col != q) {
-					temp[i][j++] = mtrx[row][col];
-					if (j == n - 1) {
-						j = 0;
-						++i;
-					}
-				}
-			}
-		}
-	}
-
-public:
-
-	void init(const vector<float>& input_values, const int& size_y, const int& size_x)
+void main_menu() 
+{
+	setup_console();
+	vector<vector<std::string>> menu = {
+	{"1.Ввод матрицы A.\n2.Ввод матрицы B.\n3.Переход к выбору действия.\n4.Выход.\n"},
+	{"1.Ввод с консоли.\n2.Ввод из файла.\n"},
+	{"Количество строк матрицы: ", "Количество столбцов матрицы: ", "Введите элементы матрицы:\n", "Итоговая матрица: \n"},
+	{"Введите путь к файлу: "}
+	};
+	std::cout << menu[0][0];
+	int choice = 0;
+	std::cin >> choice;
+	while (true)
 	{
-		vector<float> tmp_vector;
-		tmp_vector.resize(size_x);
-		for (size_t y = 0; y < size_y; ++y)
-			mtrx.push_back(tmp_vector);
-		int current_index = 0;
-		for (size_t y = 0; y < size_y; ++y)
-			for (size_t x = 0; x < size_x; ++x)
-			{
-				mtrx[y][x] = input_values[current_index];
-				current_index++;
-			}
-		return;
-	}
-
-	void print_mtrx()
-	{
-		for (int y = 0; y < mtrx.size(); ++y)
+		switch (choice)
 		{
-			for (int x = 0; x < mtrx[y].size(); ++x)
-			{
-				std::cout << mtrx[y][x] << "  ";
-			}
-			std::cout << std::endl;
-		}
-	}
-
-	int get_y_size()
-	{
-		return mtrx.size();
-	}
-
-	int get_x_size()
-	{
-		return mtrx[0].size();
-	}
-
-	float get_elm_by_index(int x_index, int y_index)
-	{
-		return mtrx[y_index][x_index];
-	}
-
-	void set_elm_by_index(int& x_index, int& y_index, float& elm)
-	{
-		mtrx[y_index][x_index] = elm;
-		return;
-	}
-
-	vector<vector<float>> get_current_mtrx()
-	{
-		return mtrx;
-	}
-
-	vector<float> get_line_by_index(int y_index)
-	{
-		return mtrx[y_index];
-	}
-
-	vector<float> get_column_by_index(int x_index)
-	{
-		vector<float> column;
-		for (int y = 0; y < get_y_size(); ++y)
+		case 1:
 		{
-			column.push_back(mtrx[y][x_index]);
-		}
-		return column;
-	}
-	
-	//mtrx sum+
-	const Mtrx operator+(Mtrx& right)
-	{
-		Mtrx sum_res;
-		vector<float> result_values;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				result_values.push_back(this->get_elm_by_index(x, y) + right.get_elm_by_index(x, y));
-			}
-		sum_res.init(result_values, this->get_x_size(), right.get_y_size());
-		return sum_res;
-	}
-	//mtrx sum+=
-	const void operator+=(Mtrx& right)
-	{
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				float set_elm = this->get_elm_by_index(x, y) + right.get_elm_by_index(x, y);
-				this->set_elm_by_index(x, y, set_elm);
-			}
-		return;
-	}
-	//mtrx difference-
-	const Mtrx operator-(Mtrx& right)
-	{
-		Mtrx difference_res;
-		vector<float> result_values;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				result_values.push_back(this->get_elm_by_index(x, y) - right.get_elm_by_index(x, y));
-			}
-		difference_res.init(result_values, this->get_x_size(), right.get_y_size());
-		return difference_res;
-	}
-	//mtrx difference-=
-	const void operator-=(Mtrx& right)
-	{
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				float set_elm = this->get_elm_by_index(x, y) - right.get_elm_by_index(x, y);
-				this->set_elm_by_index(x, y, set_elm);
-			}
-		return;
-	}
-	//mtrx sum+(value)
-	const Mtrx operator+(float addition_value)
-	{
-		Mtrx sum_res;
-		vector<float> result_values;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				result_values.push_back(this->get_elm_by_index(x, y) + addition_value);
-			}
-		sum_res.init(result_values, this->get_x_size(), this->get_y_size());
-		return sum_res;
-	}
-	//mtrx sum+=(value)
-	const void operator+=(float addition_value)
-	{
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				float set_elm = this->get_elm_by_index(x, y) + addition_value;
-				this->set_elm_by_index(x, y, set_elm);
-			}
-		return;
-	}
-	//mtrx difference-(value)
-	const Mtrx operator-(float difference_value)
-	{
-		Mtrx difference_res;
-		vector<float> result_values;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				result_values.push_back(this->get_elm_by_index(x, y) - difference_value);
-			}
-		difference_res.init(result_values, this->get_x_size(), this->get_y_size());
-		return difference_res;
-	}
-	//mtrx difference-=(value)
-	const void operator-=(float addition_value)
-	{
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				float set_elm = this->get_elm_by_index(x, y) - addition_value;
-				this->set_elm_by_index(x, y, set_elm);
-			}
-		return;
-	}
-	//check mtrx rows and columns(possibility for multiplying)
-	bool check_multiplication_possibility(Mtrx& right)
-	{
-		if (this->get_y_size() == right.get_x_size())
-			return true;
-		else
-			return false;
-	}
-	//mtrx multiplication*
-	const Mtrx operator*(Mtrx& right)
-	{
-		Mtrx multiplication_res;
-		float tmp_res = 0;
-		vector<float> result_values;
-		vector<vector<float>> tmp_left_mtrx;
-		vector<vector<float>> tmp_right_mtrx;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			tmp_left_mtrx.push_back(this->get_line_by_index(y));
-		for (int x = 0; x < right.get_x_size(); ++x)
-			tmp_right_mtrx.push_back(right.get_column_by_index(x));
-		for (int i = 0; i < tmp_left_mtrx.size(); ++i)
-		{
-			for (int j = 0; j < tmp_right_mtrx.size(); ++j)
-			{
-				tmp_res = 0;
-				for (int z = 0; z < tmp_right_mtrx[j].size(); ++z)
-				{
-					tmp_res += tmp_left_mtrx[i][z] * tmp_right_mtrx[j][z];
-				}
-				result_values.push_back(tmp_res);
-			}
-		}
-		multiplication_res.init(result_values, this->get_y_size(), right.get_x_size());
-		return multiplication_res;
-	}
-	//mtrx multiplication*(value)
-	const Mtrx operator*(float multiplication_value)
-	{
-		Mtrx multiplication_res;
-		vector<float> result_values;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				result_values.push_back(this->get_elm_by_index(x, y) * multiplication_value);
-			}
-		multiplication_res.init(result_values, this->get_x_size(), this->get_y_size());
-		return multiplication_res;
-	}
-	//mtrx multiplication*=(value)
-	const void operator*=(float multiplication_value)
-	{
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				float set_elm = this->get_elm_by_index(x, y) * multiplication_value;
-				this->set_elm_by_index(x, y, set_elm);
-			}
-		return;
-	}
-	//mtrx division/(value)
-	const Mtrx operator/(float division_value)
-	{
-		Mtrx difference_res;
-		vector<float> result_values;
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				result_values.push_back(this->get_elm_by_index(x, y) / division_value);
-			}
-		difference_res.init(result_values, this->get_x_size(), this->get_y_size());
-		return difference_res;
-	}
-	//mtrx multiplication*=(value)
-	const void operator/=(float division_value)
-	{
-		for (int y = 0; y < this->get_y_size(); ++y)
-			for (int x = 0; x < this->get_x_size(); ++x)
-			{
-				float set_elm = this->get_elm_by_index(x, y) / division_value;
-				this->set_elm_by_index(x, y, set_elm);
-			}
-		return;
-	}
-	//mtrx involution^
-	const Mtrx operator^(int involution_value)
-	{
-		Mtrx res_mtrx;
-		Mtrx tmp_mtrx = *this;
-		for (int i = 1; i < involution_value; ++i)
-		{
-			res_mtrx = tmp_mtrx * (*this);
-			tmp_mtrx = res_mtrx;
-		}
-		return res_mtrx;
-	}
-	//mtrx involution^=
-	const void operator^=(int involution_value)
-	{
-		Mtrx res_mtrx;
-		Mtrx tmp_mtrx = *this;
-		for (int i = 1; i < involution_value; ++i)
-		{
-			res_mtrx = tmp_mtrx * (*this);
-			tmp_mtrx = res_mtrx;
-		}
-		*this = res_mtrx;
-	}
 
-	float determinant()
-	{
-		vector<vector<float>> mtrx = this->get_current_mtrx();
-		float res = determinant_utility(mtrx, mtrx.size());
-		return res;
-	}
-
-	float M_normal_mtrx()
-	{
-		vector<float> values;
-		for (int i = 0; i < this->get_y_size(); ++i)
-		{
-			float value = 0;
-			for (auto& s : this->get_line_by_index(i))
-			{
-				value += s;
-				++s;
-			}
-			values.push_back(value);
+		};
+		default:
+			break;
 		}
-		float res = values[0];
-		for (int i = 1; i < values.size(); ++i)
-			if (res < values[i])
-				res = values[i];
-		return res;
 	}
+	//functions_menu();
+}
 
-	float L_normal_mtrx()
-	{
-		vector<float> values;
-		for (int i = 0; i < this->get_x_size(); ++i)
-		{
-			float value = 0;
-			for (auto& s : this->get_column_by_index(i))
-			{
-				value += s;
-				++s;
-			}
-			values.push_back(value);
-		}
-		float res = values[0];
-		for (int i = 1; i < values.size(); ++i)
-			if (res < values[i])
-				res = values[i];
-		return res;
-	}
-
-	float K_normal_mtrx()
-	{
-		vector<float> values;
-		for (int i = 0; i < this->get_y_size(); ++i)
-		{
-			float value = 0;
-			for (auto& s : this->get_line_by_index(i))
-			{
-				value += pow(s, 2.0);
-				++s;
-			}
-			values.push_back(value);
-		}
-		float res = 0;
-		for (int i = 0; i < values.size(); ++i)
-			res += values[i];
-		return sqrt(res);
-	}
-};
 
 int main()
 {
-	vector<float> test = {10,1,2,4,10,1,3,1,5 };
-	vector<float> test1 = {1,2,3,4,5,6,7,8,9};
-	Mtrx m;
-	m.init(test, 3,3);
-	std::cout << m.determinant() << std::endl;
-	m.print_mtrx();
-	std::cout << std::endl;
+	int x, y;
+	vector<float> inpur;
+	std::string path="D:\\university\\Lab1.7.2_2sem_PPOIS_proj\\Sources\\1.txt";
+	tie(y,x,inpur)=file_input(path);
 	return 0;
 }

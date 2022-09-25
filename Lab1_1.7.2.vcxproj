@@ -140,6 +140,15 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Lab1_1.7.2.cpp" />
+    <ClCompile Include="Mtrx_Class.cpp" />
+    <ClCompile Include="InputLib.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="InputLibHeader.h" />
+    <ClInclude Include="MtrxHeader.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Sources\1.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

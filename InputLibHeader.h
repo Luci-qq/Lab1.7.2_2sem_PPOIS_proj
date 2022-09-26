@@ -5,3 +5,4 @@
 #include <sstream>
 #include <fstream>
 std::tuple<int, int, std::vector<float>> file_input(std::string& path);
+std::tuple<int, int, std::vector<float>> console_input();

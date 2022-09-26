@@ -26,3 +26,22 @@ std::tuple<int,int, std::vector<float>>	file_input(std::string &path)
 	input_values.erase(input_values.begin());
 	return std::make_tuple(y_size,x_size,input_values);
 }
+
+std::tuple<int, int, std::vector<float>> console_input()
+{
+	std::vector<std::string> console_utility = { "Количество строк матрицы: ", "Количество столбцов матрицы: ",
+		"Введите элементы матрицы:\n"};
+	int x, y;
+	float value;
+	std::vector<float> values;
+	std::cout << console_utility[0];
+	std::cin >> y;
+	std::cout << console_utility[1];
+	std::cin >> x;
+	for (int i = 0; i < x * y; ++i)
+	{
+		std::cin >> value;
+		values.push_back(value);
+	}
+	return std::make_tuple(y,x,values);
+}

@@ -1,12 +1,4 @@
-﻿  InputLib.cpp
-D:\university\Lab1.7.2_2sem_PPOIS_proj\InputLib.cpp(21,25): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
-          with
-          [
-              _Ty=float
-          ]
-D:\university\Lab1.7.2_2sem_PPOIS_proj\InputLib.cpp(22,25): warning C4244: =: преобразование "_Ty" в "int", возможна потеря данных
-          with
-          [
-              _Ty=float
-          ]
+﻿  Lab1_1.7.2.cpp
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(203,14): warning C4101: y_size: неиспользованная локальная переменная
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(203,6): warning C4101: x_size: неиспользованная локальная переменная
   Lab1_1.7.2.vcxproj -> D:\university\Lab1.7.2_2sem_PPOIS_proj\x64\Debug\Lab1_1.7.2.exe

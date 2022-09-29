@@ -9,10 +9,6 @@ private:
 	vector<vector<float>> mtrx;
 	float determinant_utility(vector<vector<float>>& mtrx, int mtrx_size);
 	void subMatrix(vector<vector<float>>& mtrx, vector<vector<float>>& temp, int p, int q, int n);
-public:
-	void init(const vector<float>& input_values, const int& size_y, const int& size_x);
-	void clear_current_mtrx();
-	void print_mtrx();
 	int get_y_size();
 	int get_x_size();
 	float get_elm_by_index(int x_index, int y_index);
@@ -20,6 +16,10 @@ public:
 	vector<vector<float>> get_current_mtrx();
 	vector<float> get_line_by_index(int y_index);
 	vector<float> get_column_by_index(int x_index);
+public:
+	void init(const vector<float>& input_values, const int& size_y, const int& size_x);
+	void print_mtrx();
+	void clear_current_mtrx();
 	const Mtrx operator+(Mtrx& right);
 	const void operator+=(Mtrx& right);
 	const Mtrx operator-(Mtrx& right);

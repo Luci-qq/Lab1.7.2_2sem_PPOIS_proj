@@ -1,0 +1,48 @@
+\hypertarget{_mtrx_header_8h_source}{}\doxysection{Mtrx\+Header.\+h}
+\mbox{\hyperlink{_mtrx_header_8h}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{10 \textcolor{keyword}{using }std::vector;}
+\DoxyCodeLine{17 \textcolor{keyword}{class }\mbox{\hyperlink{class_mtrx}{Mtrx}}}
+\DoxyCodeLine{18 \{}
+\DoxyCodeLine{19 \textcolor{keyword}{private}: }
+\DoxyCodeLine{20     vector<vector<float>> mtrx;}
+\DoxyCodeLine{21     \textcolor{keywordtype}{float} determinant\_utility(vector<vector<float>>\& mtrx, \textcolor{keywordtype}{int} mtrx\_size);}
+\DoxyCodeLine{22     \textcolor{keywordtype}{void} subMatrix(vector<vector<float>>\& mtrx, vector<vector<float>>\& temp, \textcolor{keywordtype}{int} p, \textcolor{keywordtype}{int} q, \textcolor{keywordtype}{int} n);}
+\DoxyCodeLine{23     \textcolor{keywordtype}{int} get\_y\_size();}
+\DoxyCodeLine{24     \textcolor{keywordtype}{int} get\_x\_size();}
+\DoxyCodeLine{25     \textcolor{keywordtype}{float} get\_elm\_by\_index(\textcolor{keywordtype}{int} x\_index, \textcolor{keywordtype}{int} y\_index);}
+\DoxyCodeLine{26     \textcolor{keywordtype}{void} set\_elm\_by\_index(\textcolor{keywordtype}{int}\& x\_index, \textcolor{keywordtype}{int}\& y\_index, \textcolor{keywordtype}{float}\& elm);}
+\DoxyCodeLine{27     vector<vector<float>> get\_current\_mtrx();}
+\DoxyCodeLine{28     vector<float> get\_line\_by\_index(\textcolor{keywordtype}{int} y\_index);}
+\DoxyCodeLine{29     vector<float> get\_column\_by\_index(\textcolor{keywordtype}{int} x\_index);}
+\DoxyCodeLine{30 \textcolor{keyword}{public}:}
+\DoxyCodeLine{37     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a25f517d9f74a38e0bfa7b42ca252857b}{init}}(\textcolor{keyword}{const} vector<float>\& input\_values, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& size\_y, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& size\_x);}
+\DoxyCodeLine{41     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a50119a57936a0675a7d3965dca97e8f5}{print\_mtrx}}();}
+\DoxyCodeLine{45     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a0b7ed78df4f1fe2da15f2fdb23c24104}{clear\_current\_mtrx}}();}
+\DoxyCodeLine{52     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a134a1ba04bf2b6237c80e339f9612615}{operator+}}(\mbox{\hyperlink{class_mtrx}{Mtrx}}\& right);}
+\DoxyCodeLine{58     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a799a0f86f056e0e5783ef3f39b9fbba1}{operator+=}}(\mbox{\hyperlink{class_mtrx}{Mtrx}}\& right);}
+\DoxyCodeLine{65     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a7b2614a2633ab006a77871b30c920cfd}{operator-\/}}(\mbox{\hyperlink{class_mtrx}{Mtrx}}\& right);}
+\DoxyCodeLine{71     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a5f40085c7d7f1603af49f1af906abf8f}{operator-\/=}}(\mbox{\hyperlink{class_mtrx}{Mtrx}}\& right);}
+\DoxyCodeLine{78     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a134a1ba04bf2b6237c80e339f9612615}{operator+}}(\textcolor{keywordtype}{float} addition\_value);}
+\DoxyCodeLine{84     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a799a0f86f056e0e5783ef3f39b9fbba1}{operator+=}}(\textcolor{keywordtype}{float} addition\_value);}
+\DoxyCodeLine{91     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a7b2614a2633ab006a77871b30c920cfd}{operator-\/}}(\textcolor{keywordtype}{float} difference\_value);}
+\DoxyCodeLine{97     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a5f40085c7d7f1603af49f1af906abf8f}{operator-\/=}}(\textcolor{keywordtype}{float} difference\_value);}
+\DoxyCodeLine{98     \textcolor{keywordtype}{bool} check\_multiplication\_possibility(\mbox{\hyperlink{class_mtrx}{Mtrx}}\& right);}
+\DoxyCodeLine{105     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_afad1a3c0ada04891756fb3f4bfe4cce9}{operator*}}(\mbox{\hyperlink{class_mtrx}{Mtrx}}\& right);}
+\DoxyCodeLine{112     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_afad1a3c0ada04891756fb3f4bfe4cce9}{operator*}}(\textcolor{keywordtype}{float} multiplication\_value);}
+\DoxyCodeLine{118     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a7c16477dbcdf750a962ba9117807e70e}{operator*=}}(\textcolor{keywordtype}{float} multiplication\_value);}
+\DoxyCodeLine{125     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a2b3c69c6e537f8e58f1c482a64affdaa}{operator/}}(\textcolor{keywordtype}{float} division\_value);}
+\DoxyCodeLine{131     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a30907d14b4c9a907d5d07165eb952350}{operator/=}}(\textcolor{keywordtype}{float} division\_value);}
+\DoxyCodeLine{138     \textcolor{keyword}{const} \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a345a31e62915ed73daabe532bb7c2338}{operator\string^}}(\textcolor{keywordtype}{int} involution\_value);}
+\DoxyCodeLine{144     \textcolor{keyword}{const} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_mtrx_a9281013e2ed934a0dacd63d2fe463934}{operator\string^=}}(\textcolor{keywordtype}{int} involution\_value);}
+\DoxyCodeLine{150     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_mtrx_aed8e64ddfeee96ff5d40f837c31f9374}{determinant}}();}
+\DoxyCodeLine{156     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_mtrx_a56b7569790a36013752a427486edf7f2}{M\_normal\_mtrx}}();}
+\DoxyCodeLine{162     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_mtrx_abe0e0608213d234731d5aaf362621b75}{L\_normal\_mtrx}}();}
+\DoxyCodeLine{168     \textcolor{keywordtype}{float} \mbox{\hyperlink{class_mtrx_abdc064394e87b87569b5f1caf9e7149f}{K\_normal\_mtrx}}();}
+\DoxyCodeLine{169 \};}
+
+\end{DoxyCode}

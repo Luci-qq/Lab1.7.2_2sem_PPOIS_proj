@@ -1,0 +1,58 @@
+\hypertarget{_input_lib_header_8h}{}\doxysection{Файл Input\+Lib\+Header.\+h}
+\label{_input_lib_header_8h}\index{InputLibHeader.h@{InputLibHeader.h}}
+
+
+Заголовочный файл с описанием методов ввода.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+\doxysubsection*{Функции}
+\begin{DoxyCompactItemize}
+\item 
+std\+::tuple$<$ int, int, std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{_input_lib_header_8h_ab626972a0083669c9effdfba7e94886f}{file\+\_\+input}} (std\+::string \&path)
+\begin{DoxyCompactList}\small\item\em Метод для чтению данных из файла. Результатом является 2 числа представляющих собой размеры матрицы(количество строк, количество столбцов) и массив вещественных чисел(элементы для заполнения матрицы).  \end{DoxyCompactList}\item 
+std\+::tuple$<$ int, int, std\+::vector$<$ float $>$ $>$ \mbox{\hyperlink{_input_lib_header_8h_a39f9e2f9c877ef0e74ed7d788597da6d}{console\+\_\+input}} ()
+\begin{DoxyCompactList}\small\item\em Метод для введения данных из консоли(терминала). Результатом является 2 числа представляющих собой размеры матрицы(количество строк, количество столбцов) и массив вещественных чисел(элементы для заполнения матрицы).  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Заголовочный файл с описанием методов ввода. 
+
+Данный файл содержит в себе определения основных методов, используемых для ввода данных в программе. 
+
+\doxysubsection{Функции}
+\mbox{\Hypertarget{_input_lib_header_8h_a39f9e2f9c877ef0e74ed7d788597da6d}\label{_input_lib_header_8h_a39f9e2f9c877ef0e74ed7d788597da6d}} 
+\index{InputLibHeader.h@{InputLibHeader.h}!console\_input@{console\_input}}
+\index{console\_input@{console\_input}!InputLibHeader.h@{InputLibHeader.h}}
+\doxysubsubsection{\texorpdfstring{console\_input()}{console\_input()}}
+{\footnotesize\ttfamily std\+::tuple$<$ int, int, std\+::vector$<$ float $>$ $>$ console\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод для введения данных из консоли(терминала). Результатом является 2 числа представляющих собой размеры матрицы(количество строк, количество столбцов) и массив вещественных чисел(элементы для заполнения матрицы).  
+
+\begin{DoxyReturn}{Возвращает}
+tuple$<$int,int,std\+::vector$<$float$>$$>$
+\end{DoxyReturn}
+\mbox{\Hypertarget{_input_lib_header_8h_ab626972a0083669c9effdfba7e94886f}\label{_input_lib_header_8h_ab626972a0083669c9effdfba7e94886f}} 
+\index{InputLibHeader.h@{InputLibHeader.h}!file\_input@{file\_input}}
+\index{file\_input@{file\_input}!InputLibHeader.h@{InputLibHeader.h}}
+\doxysubsubsection{\texorpdfstring{file\_input()}{file\_input()}}
+{\footnotesize\ttfamily std\+::tuple$<$ int, int, std\+::vector$<$ float $>$ $>$ file\+\_\+input (\begin{DoxyParamCaption}\item[{std\+::string \&}]{path }\end{DoxyParamCaption})}
+
+
+
+Метод для чтению данных из файла. Результатом является 2 числа представляющих собой размеры матрицы(количество строк, количество столбцов) и массив вещественных чисел(элементы для заполнения матрицы).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em path} & Путь к файлу содержащему информацию.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+tuple$<$int,int,std\+::vector$<$float$>$$>$
+\end{DoxyReturn}

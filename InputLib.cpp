@@ -1,5 +1,4 @@
 #include "InputLibHeader.h"
-
 std::tuple<int,int, std::vector<float>>	file_input(std::string &path)
 {
 	std::ifstream fin(path);
@@ -26,7 +25,6 @@ std::tuple<int,int, std::vector<float>>	file_input(std::string &path)
 	input_values.erase(input_values.begin());
 	return std::make_tuple(y_size,x_size,input_values);
 }
-
 std::tuple<int, int, std::vector<float>> console_input()
 {
 	std::vector<std::string> console_utility = { "Количество строк матрицы: ", "Количество столбцов матрицы: ",

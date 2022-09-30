@@ -1,4 +1,10 @@
 ﻿  Lab1_1.7.2.cpp
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(203,14): warning C4101: y_size: неиспользованная локальная переменная
-D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(203,6): warning C4101: x_size: неиспользованная локальная переменная
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(227,14): warning C4101: y_size: неиспользованная локальная переменная
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Lab1_1.7.2.cpp(227,6): warning C4101: x_size: неиспользованная локальная переменная
+  Mtrx_Class.cpp
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Mtrx_Class.cpp(74,20): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Mtrx_Class.cpp(79,23): warning C4267: return: преобразование из "size_t" в "int"; возможна потеря данных
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Mtrx_Class.cpp(319,59): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+D:\university\Lab1.7.2_2sem_PPOIS_proj\Mtrx_Class.cpp(371,16): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Создание кода...
   Lab1_1.7.2.vcxproj -> D:\university\Lab1.7.2_2sem_PPOIS_proj\x64\Debug\Lab1_1.7.2.exe

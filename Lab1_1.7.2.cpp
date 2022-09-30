@@ -13,6 +13,7 @@ void setup_console()
 
 void print_named_mtrx(Mtrx& current, std::string mtrx_name)
 {
+	system("cls");
 	std::cout << "Итоговая матрица " << mtrx_name << ":\n";
 	current.print_mtrx();
 }
@@ -44,8 +45,8 @@ void functions_menu(Mtrx &A,Mtrx &B)
 {
 	system("cls");
 	std::vector<std::string> func_menu = { "Список действий\n1.A+B\n2.A+=B\n3.A-B(-3 - для B-A)\n"
-		"4.A-=B\n5.A*B\n6.A+value\n7.B+value\n"
-		"8.A^value\n9.B^value\n10.det(A)\n11.det(B)\n12.Норма матрицы A\n13.Норма матрицы B\n"};
+		"4.A-=B\n5.A*B\n6.A+value\n7.B+value\n8.A*value\n9.B*value\n10.A/value\n11.B/value"
+		"12.A^value\n13.B^value\n14.det(A)\n15.det(B)\n16.Норма матрицы A\n17.Норма матрицы B\n"};
 	std::cout << func_menu[0];
 	int choice = 0;
 	while (true)
@@ -56,63 +57,54 @@ void functions_menu(Mtrx &A,Mtrx &B)
 		case 1:
 		{
 			Mtrx C = A + B;
-			system("cls");
 			print_named_mtrx(C, "C");
 			break;
 		}
 		case 2:
 		{
 			A += B;
-			system("cls");
 			print_named_mtrx(A, "A");
 			break;
 		}
 		case -2:
 		{
 			B += A;
-			system("cls");
 			print_named_mtrx(A, "A");
 			break;
 		}
 		case 3:
 		{
 			Mtrx C = A - B;
-			system("cls");
 			print_named_mtrx(C, "C");
 			break;
 		}
 		case -3:
 		{
 			Mtrx C = B - A;
-			system("cls");
 			print_named_mtrx(C, "C");
 			break;
 		}
 		case 4:
 		{
 			A -= B;
-			system("cls");
 			print_named_mtrx(A, "A");
 			break;
 		}
 		case -4:
 		{
 			B -= A;
-			system("cls");
 			print_named_mtrx(B, "B");
 			break;
 		}
 		case 5:
 		{
 			Mtrx C= A* B;
-			system("cls");
 			print_named_mtrx(C, "C");
 			break;
 		}
 		case -5:
 		{
 			Mtrx C = B * A;
-			system("cls");
 			print_named_mtrx(C, "C");
 			break;
 		}
@@ -122,7 +114,6 @@ void functions_menu(Mtrx &A,Mtrx &B)
 			std::cout << "Введите число: ";
 			std::cin >> value;
 			A += value;
-			system("cls");
 			print_named_mtrx(A, "A");
 			break;
 		}
@@ -132,43 +123,76 @@ void functions_menu(Mtrx &A,Mtrx &B)
 			std::cout << "Введите число: ";
 			std::cin >> value;
 			B += value;
-			system("cls");
 			print_named_mtrx(B, "B");
 			break;
 		}
 		case 8:
 		{
-			int value;
-			std::cout << "Введите степень: ";
+			float value;
+			std::cout << "Введите число: ";
 			std::cin >> value;
-			A ^= value;
-			system("cls");
+			A *= value;
 			print_named_mtrx(A, "A");
 			break;
 		}
 		case 9:
 		{
-			int value;
-			std::cout << "Введите степень: ";
+			float value;
+			std::cout << "Введите число: ";
 			std::cin >> value;
-			B ^= value;
-			system("cls");
+			B *= value;
 			print_named_mtrx(B, "B");
 			break;
 		}
 		case 10:
 		{
+			float value;
+			std::cout << "Введите число: ";
+			std::cin >> value;
+			A /= value;
+			print_named_mtrx(A, "A");
+			break;
+		}
+		case 11:
+		{
+			float value;
+			std::cout << "Введите число: ";
+			std::cin >> value;
+			B /= value;
+			print_named_mtrx(B, "B");
+			break;
+		}
+		case 12:
+		{
+			int value;
+			std::cout << "Введите степень: ";
+			std::cin >> value;
+			A ^= value;
+			print_named_mtrx(A, "A");
+			break;
+		}
+		case 13:
+		{
+			int value;
+			std::cout << "Введите степень: ";
+			std::cin >> value;
+			B ^= value;
+			print_named_mtrx(B, "B");
+			break;
+		}
+		case 14:
+		{
 			system("cls");
 			std::cout << "det(A) = " << A.determinant()<<"\n";
 			break;
 		}
-		case 11:
+		case 15:
 		{
 			system("cls");
 			std::cout << "det(B) = " << B.determinant()<<"\n";
 			break;
 		}
-		case 12:
+		case 16:
 		{
 			system("cls");
 			std::cout << "K-norm: " << A.K_normal_mtrx() << "\n";
@@ -176,7 +200,7 @@ void functions_menu(Mtrx &A,Mtrx &B)
 			std::cout << "M-norm: " << A.M_normal_mtrx() << "\n";
 			break;
 		}
-		case 13:
+		case 17:
 		{
 			system("cls");
 			std::cout << "K-norm: " << B.K_normal_mtrx() << "\n";

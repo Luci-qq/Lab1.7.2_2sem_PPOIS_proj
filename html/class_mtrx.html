@@ -1,0 +1,709 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab1.7.2: Класс Mtrx</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Lab1.7.2
+   </div>
+   <div id="projectbrief">C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="class_mtrx-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс Mtrx</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Класс вещественной матрицы  
+ <a href="class_mtrx.html#details">Подробнее...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_mtrx_header_8h_source.html">MtrxHeader.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:a25f517d9f74a38e0bfa7b42ca252857b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a25f517d9f74a38e0bfa7b42ca252857b">init</a> (const vector&lt; float &gt; &amp;input_values, const int &amp;size_y, const int &amp;size_x)</td></tr>
+<tr class="memdesc:a25f517d9f74a38e0bfa7b42ca252857b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод предназначен для инициализации матрицы.   <a href="class_mtrx.html#a25f517d9f74a38e0bfa7b42ca252857b">Подробнее...</a><br /></td></tr>
+<tr class="separator:a25f517d9f74a38e0bfa7b42ca252857b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50119a57936a0675a7d3965dca97e8f5"><td class="memItemLeft" align="right" valign="top"><a id="a50119a57936a0675a7d3965dca97e8f5" name="a50119a57936a0675a7d3965dca97e8f5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>print_mtrx</b> ()</td></tr>
+<tr class="memdesc:a50119a57936a0675a7d3965dca97e8f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Вывод матрицы на экран.  <br /></td></tr>
+<tr class="separator:a50119a57936a0675a7d3965dca97e8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0b7ed78df4f1fe2da15f2fdb23c24104"><td class="memItemLeft" align="right" valign="top"><a id="a0b7ed78df4f1fe2da15f2fdb23c24104" name="a0b7ed78df4f1fe2da15f2fdb23c24104"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>clear_current_mtrx</b> ()</td></tr>
+<tr class="memdesc:a0b7ed78df4f1fe2da15f2fdb23c24104"><td class="mdescLeft">&#160;</td><td class="mdescRight">Очистка текущей матрицы.  <br /></td></tr>
+<tr class="separator:a0b7ed78df4f1fe2da15f2fdb23c24104"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a134a1ba04bf2b6237c80e339f9612615"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a134a1ba04bf2b6237c80e339f9612615">operator+</a> (<a class="el" href="class_mtrx.html">Mtrx</a> &amp;right)</td></tr>
+<tr class="memdesc:a134a1ba04bf2b6237c80e339f9612615"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(+). Выполнение операции сложения 2ух матриц. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#a134a1ba04bf2b6237c80e339f9612615">Подробнее...</a><br /></td></tr>
+<tr class="separator:a134a1ba04bf2b6237c80e339f9612615"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a799a0f86f056e0e5783ef3f39b9fbba1"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a799a0f86f056e0e5783ef3f39b9fbba1">operator+=</a> (<a class="el" href="class_mtrx.html">Mtrx</a> &amp;right)</td></tr>
+<tr class="memdesc:a799a0f86f056e0e5783ef3f39b9fbba1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(+=). Выполнение операции сложения 2ух матриц. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a799a0f86f056e0e5783ef3f39b9fbba1">Подробнее...</a><br /></td></tr>
+<tr class="separator:a799a0f86f056e0e5783ef3f39b9fbba1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b2614a2633ab006a77871b30c920cfd"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a7b2614a2633ab006a77871b30c920cfd">operator-</a> (<a class="el" href="class_mtrx.html">Mtrx</a> &amp;right)</td></tr>
+<tr class="memdesc:a7b2614a2633ab006a77871b30c920cfd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(-). Выполнение операции вычитания 2ух матриц. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#a7b2614a2633ab006a77871b30c920cfd">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7b2614a2633ab006a77871b30c920cfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f40085c7d7f1603af49f1af906abf8f"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a5f40085c7d7f1603af49f1af906abf8f">operator-=</a> (<a class="el" href="class_mtrx.html">Mtrx</a> &amp;right)</td></tr>
+<tr class="memdesc:a5f40085c7d7f1603af49f1af906abf8f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(-=). Выполнение операции вычитания 2ух матриц. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a5f40085c7d7f1603af49f1af906abf8f">Подробнее...</a><br /></td></tr>
+<tr class="separator:a5f40085c7d7f1603af49f1af906abf8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacf9e5a02b3ba06fa186660418d80a02"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#aacf9e5a02b3ba06fa186660418d80a02">operator+</a> (float addition_value)</td></tr>
+<tr class="memdesc:aacf9e5a02b3ba06fa186660418d80a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#aacf9e5a02b3ba06fa186660418d80a02">Подробнее...</a><br /></td></tr>
+<tr class="separator:aacf9e5a02b3ba06fa186660418d80a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10883827de34757406db77aa957681d9"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a10883827de34757406db77aa957681d9">operator+=</a> (float addition_value)</td></tr>
+<tr class="memdesc:a10883827de34757406db77aa957681d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a10883827de34757406db77aa957681d9">Подробнее...</a><br /></td></tr>
+<tr class="separator:a10883827de34757406db77aa957681d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee41326ad5c25327801067007551c8f7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#aee41326ad5c25327801067007551c8f7">operator-</a> (float difference_value)</td></tr>
+<tr class="memdesc:aee41326ad5c25327801067007551c8f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(-). Выполнение операации вычитания из матрицы вещественного числа. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#aee41326ad5c25327801067007551c8f7">Подробнее...</a><br /></td></tr>
+<tr class="separator:aee41326ad5c25327801067007551c8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3346aa10a4673b33152b7bbfde25c835"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a3346aa10a4673b33152b7bbfde25c835">operator-=</a> (float difference_value)</td></tr>
+<tr class="memdesc:a3346aa10a4673b33152b7bbfde25c835"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(-=). Выполнение операации сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a3346aa10a4673b33152b7bbfde25c835">Подробнее...</a><br /></td></tr>
+<tr class="separator:a3346aa10a4673b33152b7bbfde25c835"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aebb0132a8441f20a41032a7a8753566e"><td class="memItemLeft" align="right" valign="top"><a id="aebb0132a8441f20a41032a7a8753566e" name="aebb0132a8441f20a41032a7a8753566e"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>check_multiplication_possibility</b> (<a class="el" href="class_mtrx.html">Mtrx</a> &amp;right)</td></tr>
+<tr class="separator:aebb0132a8441f20a41032a7a8753566e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afad1a3c0ada04891756fb3f4bfe4cce9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#afad1a3c0ada04891756fb3f4bfe4cce9">operator*</a> (<a class="el" href="class_mtrx.html">Mtrx</a> &amp;right)</td></tr>
+<tr class="memdesc:afad1a3c0ada04891756fb3f4bfe4cce9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(*). Выполнение операции умножения 2ух матриц. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#afad1a3c0ada04891756fb3f4bfe4cce9">Подробнее...</a><br /></td></tr>
+<tr class="separator:afad1a3c0ada04891756fb3f4bfe4cce9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b0bbbbad412259af01fc6f1f6445389"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a6b0bbbbad412259af01fc6f1f6445389">operator*</a> (float multiplication_value)</td></tr>
+<tr class="memdesc:a6b0bbbbad412259af01fc6f1f6445389"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(*). Выполнение операции умножения матрицы на вещественное число. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#a6b0bbbbad412259af01fc6f1f6445389">Подробнее...</a><br /></td></tr>
+<tr class="separator:a6b0bbbbad412259af01fc6f1f6445389"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7c16477dbcdf750a962ba9117807e70e"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a7c16477dbcdf750a962ba9117807e70e">operator*=</a> (float multiplication_value)</td></tr>
+<tr class="memdesc:a7c16477dbcdf750a962ba9117807e70e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(*=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a7c16477dbcdf750a962ba9117807e70e">Подробнее...</a><br /></td></tr>
+<tr class="separator:a7c16477dbcdf750a962ba9117807e70e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3c69c6e537f8e58f1c482a64affdaa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a2b3c69c6e537f8e58f1c482a64affdaa">operator/</a> (float division_value)</td></tr>
+<tr class="memdesc:a2b3c69c6e537f8e58f1c482a64affdaa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(/). Выполнение операции деления матрицы на вещественное число. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#a2b3c69c6e537f8e58f1c482a64affdaa">Подробнее...</a><br /></td></tr>
+<tr class="separator:a2b3c69c6e537f8e58f1c482a64affdaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a30907d14b4c9a907d5d07165eb952350"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a30907d14b4c9a907d5d07165eb952350">operator/=</a> (float division_value)</td></tr>
+<tr class="memdesc:a30907d14b4c9a907d5d07165eb952350"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(/=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a30907d14b4c9a907d5d07165eb952350">Подробнее...</a><br /></td></tr>
+<tr class="separator:a30907d14b4c9a907d5d07165eb952350"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a345a31e62915ed73daabe532bb7c2338"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_mtrx.html">Mtrx</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a345a31e62915ed73daabe532bb7c2338">operator^</a> (int involution_value)</td></tr>
+<tr class="memdesc:a345a31e62915ed73daabe532bb7c2338"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(^). Выполнение операции возведения в степень матрицы. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).   <a href="class_mtrx.html#a345a31e62915ed73daabe532bb7c2338">Подробнее...</a><br /></td></tr>
+<tr class="separator:a345a31e62915ed73daabe532bb7c2338"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9281013e2ed934a0dacd63d2fe463934"><td class="memItemLeft" align="right" valign="top">const void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a9281013e2ed934a0dacd63d2fe463934">operator^=</a> (int involution_value)</td></tr>
+<tr class="memdesc:a9281013e2ed934a0dacd63d2fe463934"><td class="mdescLeft">&#160;</td><td class="mdescRight">Перегрузка оператора(^=). Выполнение операции возведения в степень матрицы. Результат выполения записывается в текущую матрицу. <br  />
+   <a href="class_mtrx.html#a9281013e2ed934a0dacd63d2fe463934">Подробнее...</a><br /></td></tr>
+<tr class="separator:a9281013e2ed934a0dacd63d2fe463934"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aed8e64ddfeee96ff5d40f837c31f9374"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#aed8e64ddfeee96ff5d40f837c31f9374">determinant</a> ()</td></tr>
+<tr class="memdesc:aed8e64ddfeee96ff5d40f837c31f9374"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод по вычислению определителя(детерминанта) матрицы. Результатом станет вещественное число.   <a href="class_mtrx.html#aed8e64ddfeee96ff5d40f837c31f9374">Подробнее...</a><br /></td></tr>
+<tr class="separator:aed8e64ddfeee96ff5d40f837c31f9374"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a56b7569790a36013752a427486edf7f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#a56b7569790a36013752a427486edf7f2">M_normal_mtrx</a> ()</td></tr>
+<tr class="memdesc:a56b7569790a36013752a427486edf7f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод по вычислению M-нормы матрицы. Результатом станет вещественное число.   <a href="class_mtrx.html#a56b7569790a36013752a427486edf7f2">Подробнее...</a><br /></td></tr>
+<tr class="separator:a56b7569790a36013752a427486edf7f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abe0e0608213d234731d5aaf362621b75"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#abe0e0608213d234731d5aaf362621b75">L_normal_mtrx</a> ()</td></tr>
+<tr class="memdesc:abe0e0608213d234731d5aaf362621b75"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод по вычислению L-нормы матрицы. Результатом станет вещественное число.   <a href="class_mtrx.html#abe0e0608213d234731d5aaf362621b75">Подробнее...</a><br /></td></tr>
+<tr class="separator:abe0e0608213d234731d5aaf362621b75"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdc064394e87b87569b5f1caf9e7149f"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_mtrx.html#abdc064394e87b87569b5f1caf9e7149f">K_normal_mtrx</a> ()</td></tr>
+<tr class="memdesc:abdc064394e87b87569b5f1caf9e7149f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Метод по вычислению K-нормы матрицы. Результатом станет вещественное число.   <a href="class_mtrx.html#abdc064394e87b87569b5f1caf9e7149f">Подробнее...</a><br /></td></tr>
+<tr class="separator:abdc064394e87b87569b5f1caf9e7149f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p >Класс вещественной матрицы </p>
+<p >Данный класс содержит методы по сложению, вычитанию, умножению, делению матриц, также вычисления детермината и норм матрицы. </p>
+</div><h2 class="groupheader">Методы</h2>
+<a id="aed8e64ddfeee96ff5d40f837c31f9374" name="aed8e64ddfeee96ff5d40f837c31f9374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aed8e64ddfeee96ff5d40f837c31f9374">&#9670;&#160;</a></span>determinant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mtrx::determinant </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод по вычислению определителя(детерминанта) матрицы. Результатом станет вещественное число.  </p>
+<dl class="section return"><dt>Возвращает</dt><dd>float determinant</dd></dl>
+
+</div>
+</div>
+<a id="a25f517d9f74a38e0bfa7b42ca252857b" name="a25f517d9f74a38e0bfa7b42ca252857b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25f517d9f74a38e0bfa7b42ca252857b">&#9670;&#160;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Mtrx::init </td>
+          <td>(</td>
+          <td class="paramtype">const vector&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>input_values</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>size_y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int &amp;&#160;</td>
+          <td class="paramname"><em>size_x</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод предназначен для инициализации матрицы.  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">input_values</td><td>Массив вещественных чисел для заполнения матрицы.</td></tr>
+    <tr><td class="paramname">size_y</td><td>Количество строк матрицы.</td></tr>
+    <tr><td class="paramname">size_x</td><td>Количество столбцов матрицы.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abdc064394e87b87569b5f1caf9e7149f" name="abdc064394e87b87569b5f1caf9e7149f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdc064394e87b87569b5f1caf9e7149f">&#9670;&#160;</a></span>K_normal_mtrx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mtrx::K_normal_mtrx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод по вычислению K-нормы матрицы. Результатом станет вещественное число.  </p>
+<dl class="section return"><dt>Возвращает</dt><dd>float K_norm</dd></dl>
+
+</div>
+</div>
+<a id="abe0e0608213d234731d5aaf362621b75" name="abe0e0608213d234731d5aaf362621b75"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe0e0608213d234731d5aaf362621b75">&#9670;&#160;</a></span>L_normal_mtrx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mtrx::L_normal_mtrx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод по вычислению L-нормы матрицы. Результатом станет вещественное число.  </p>
+<dl class="section return"><dt>Возвращает</dt><dd>float L_norm</dd></dl>
+
+</div>
+</div>
+<a id="a56b7569790a36013752a427486edf7f2" name="a56b7569790a36013752a427486edf7f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a56b7569790a36013752a427486edf7f2">&#9670;&#160;</a></span>M_normal_mtrx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Mtrx::M_normal_mtrx </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Метод по вычислению M-нормы матрицы. Результатом станет вещественное число.  </p>
+<dl class="section return"><dt>Возвращает</dt><dd>float M_norm</dd></dl>
+
+</div>
+</div>
+<a id="a6b0bbbbad412259af01fc6f1f6445389" name="a6b0bbbbad412259af01fc6f1f6445389"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b0bbbbad412259af01fc6f1f6445389">&#9670;&#160;</a></span>operator*() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator* </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>multiplication_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(*). Выполнение операции умножения матрицы на вещественное число. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multiplication_value</td><td>Передача в метод,вещественного числа для выполнения операции произведения.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> multiplication_res</dd></dl>
+
+</div>
+</div>
+<a id="afad1a3c0ada04891756fb3f4bfe4cce9" name="afad1a3c0ada04891756fb3f4bfe4cce9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afad1a3c0ada04891756fb3f4bfe4cce9">&#9670;&#160;</a></span>operator*() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator* </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mtrx.html">Mtrx</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(*). Выполнение операции умножения 2ух матриц. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">right</td><td>Передача в метод, второй матрицы для выполнения операции произведения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> multiplication_res</dd></dl>
+
+</div>
+</div>
+<a id="a7c16477dbcdf750a962ba9117807e70e" name="a7c16477dbcdf750a962ba9117807e70e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c16477dbcdf750a962ba9117807e70e">&#9670;&#160;</a></span>operator*=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator*= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>multiplication_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(*=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">multiplication_value</td><td>Передача в метод,вещественного числа для выполнения операции произведения.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aacf9e5a02b3ba06fa186660418d80a02" name="aacf9e5a02b3ba06fa186660418d80a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aacf9e5a02b3ba06fa186660418d80a02">&#9670;&#160;</a></span>operator+() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator+ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>addition_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addition_value</td><td>Передача в метод,вещественного числа для выполнения операции сложения.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> addition_res</dd></dl>
+
+</div>
+</div>
+<a id="a134a1ba04bf2b6237c80e339f9612615" name="a134a1ba04bf2b6237c80e339f9612615"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a134a1ba04bf2b6237c80e339f9612615">&#9670;&#160;</a></span>operator+() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator+ </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mtrx.html">Mtrx</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(+). Выполнение операции сложения 2ух матриц. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">right</td><td>Передача в метод, второй матрицы для выполнения операции сложения. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> sum_res</dd></dl>
+
+</div>
+</div>
+<a id="a10883827de34757406db77aa957681d9" name="a10883827de34757406db77aa957681d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a10883827de34757406db77aa957681d9">&#9670;&#160;</a></span>operator+=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator+= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>addition_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">addition_value</td><td>Передача в метод,вещественного числа для выполнения операции сложения.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a799a0f86f056e0e5783ef3f39b9fbba1" name="a799a0f86f056e0e5783ef3f39b9fbba1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a799a0f86f056e0e5783ef3f39b9fbba1">&#9670;&#160;</a></span>operator+=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator+= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mtrx.html">Mtrx</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(+=). Выполнение операции сложения 2ух матриц. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">right</td><td>Передача в метод, второй матрицы для выполнения операции сложения.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aee41326ad5c25327801067007551c8f7" name="aee41326ad5c25327801067007551c8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee41326ad5c25327801067007551c8f7">&#9670;&#160;</a></span>operator-() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator- </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>difference_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(-). Выполнение операации вычитания из матрицы вещественного числа. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">difference_value</td><td>Передача в метод,вещественного числа для выполнения операции вычитания</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> difference_res</dd></dl>
+
+</div>
+</div>
+<a id="a7b2614a2633ab006a77871b30c920cfd" name="a7b2614a2633ab006a77871b30c920cfd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b2614a2633ab006a77871b30c920cfd">&#9670;&#160;</a></span>operator-() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator- </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mtrx.html">Mtrx</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(-). Выполнение операции вычитания 2ух матриц. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">right</td><td>Передача в метод, второй матрицы для выполнения операции вычитания.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> difference_res</dd></dl>
+
+</div>
+</div>
+<a id="a3346aa10a4673b33152b7bbfde25c835" name="a3346aa10a4673b33152b7bbfde25c835"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3346aa10a4673b33152b7bbfde25c835">&#9670;&#160;</a></span>operator-=() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator-= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>difference_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(-=). Выполнение операации сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">difference_value</td><td>Передача в метод,вещественного числа для выполнения операции вычитания</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5f40085c7d7f1603af49f1af906abf8f" name="a5f40085c7d7f1603af49f1af906abf8f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f40085c7d7f1603af49f1af906abf8f">&#9670;&#160;</a></span>operator-=() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator-= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_mtrx.html">Mtrx</a> &amp;&#160;</td>
+          <td class="paramname"><em>right</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(-=). Выполнение операции вычитания 2ух матриц. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">right</td><td>Передача в метод, второй матрицы для выполнения операции вычитания.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a2b3c69c6e537f8e58f1c482a64affdaa" name="a2b3c69c6e537f8e58f1c482a64affdaa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3c69c6e537f8e58f1c482a64affdaa">&#9670;&#160;</a></span>operator/()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator/ </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>division_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(/). Выполнение операции деления матрицы на вещественное число. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">division_value</td><td>Передача в метод,вещественного числа для выполнения операции деления.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> division_res</dd></dl>
+
+</div>
+</div>
+<a id="a30907d14b4c9a907d5d07165eb952350" name="a30907d14b4c9a907d5d07165eb952350"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a30907d14b4c9a907d5d07165eb952350">&#9670;&#160;</a></span>operator/=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator/= </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>division_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(/=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">division_value</td><td>Передача в метод,вещественного числа для выполнения операции деления.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a345a31e62915ed73daabe532bb7c2338" name="a345a31e62915ed73daabe532bb7c2338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a345a31e62915ed73daabe532bb7c2338">&#9670;&#160;</a></span>operator^()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_mtrx.html">Mtrx</a> Mtrx::operator^ </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>involution_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(^). Выполнение операции возведения в степень матрицы. Результатом выполнения станет новый объект класса <a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a>, матрица С(результат).  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">involution_value</td><td>Передача в метод,целого числа для выполнения операции возведения в степень</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd><a class="el" href="class_mtrx.html" title="Класс вещественной матрицы">Mtrx</a> res_mtrx</dd></dl>
+
+</div>
+</div>
+<a id="a9281013e2ed934a0dacd63d2fe463934" name="a9281013e2ed934a0dacd63d2fe463934"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9281013e2ed934a0dacd63d2fe463934">&#9670;&#160;</a></span>operator^=()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const void Mtrx::operator^= </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>involution_value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Перегрузка оператора(^=). Выполнение операции возведения в степень матрицы. Результат выполения записывается в текущую матрицу. <br  />
+  </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">involution_value</td><td>Передача в метод,вещественного числа для выполнения операции возведения в степень.</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>Объявления и описания членов классов находятся в файлах:<ul>
+<li><a class="el" href="_mtrx_header_8h_source.html">MtrxHeader.h</a></li>
+<li>Mtrx_Class.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

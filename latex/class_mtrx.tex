@@ -1,0 +1,411 @@
+\hypertarget{class_mtrx}{}\doxysection{Класс Mtrx}
+\label{class_mtrx}\index{Mtrx@{Mtrx}}
+
+
+Класс вещественной матрицы  
+
+
+
+
+{\ttfamily \#include $<$Mtrx\+Header.\+h$>$}
+
+\doxysubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_mtrx_a25f517d9f74a38e0bfa7b42ca252857b}{init}} (const vector$<$ float $>$ \&input\+\_\+values, const int \&size\+\_\+y, const int \&size\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Метод предназначен для инициализации матрицы.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mtrx_a50119a57936a0675a7d3965dca97e8f5}\label{class_mtrx_a50119a57936a0675a7d3965dca97e8f5}} 
+void {\bfseries print\+\_\+mtrx} ()
+\begin{DoxyCompactList}\small\item\em Вывод матрицы на экран.  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mtrx_a0b7ed78df4f1fe2da15f2fdb23c24104}\label{class_mtrx_a0b7ed78df4f1fe2da15f2fdb23c24104}} 
+void {\bfseries clear\+\_\+current\+\_\+mtrx} ()
+\begin{DoxyCompactList}\small\item\em Очистка текущей матрицы.  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a134a1ba04bf2b6237c80e339f9612615}{operator+}} (\mbox{\hyperlink{class_mtrx}{Mtrx}} \&right)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(+). Выполнение операции сложения 2ух матриц. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a799a0f86f056e0e5783ef3f39b9fbba1}{operator+=}} (\mbox{\hyperlink{class_mtrx}{Mtrx}} \&right)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(+=). Выполнение операции сложения 2ух матриц. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a7b2614a2633ab006a77871b30c920cfd}{operator-\/}} (\mbox{\hyperlink{class_mtrx}{Mtrx}} \&right)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(-\/). Выполнение операции вычитания 2ух матриц. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a5f40085c7d7f1603af49f1af906abf8f}{operator-\/=}} (\mbox{\hyperlink{class_mtrx}{Mtrx}} \&right)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(-\/=). Выполнение операции вычитания 2ух матриц. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_aacf9e5a02b3ba06fa186660418d80a02}{operator+}} (float addition\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a10883827de34757406db77aa957681d9}{operator+=}} (float addition\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_aee41326ad5c25327801067007551c8f7}{operator-\/}} (float difference\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(-\/). Выполнение операации вычитания из матрицы вещественного числа. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a3346aa10a4673b33152b7bbfde25c835}{operator-\/=}} (float difference\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(-\/=). Выполнение операации сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_mtrx_aebb0132a8441f20a41032a7a8753566e}\label{class_mtrx_aebb0132a8441f20a41032a7a8753566e}} 
+bool {\bfseries check\+\_\+multiplication\+\_\+possibility} (\mbox{\hyperlink{class_mtrx}{Mtrx}} \&right)
+\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_afad1a3c0ada04891756fb3f4bfe4cce9}{operator$\ast$}} (\mbox{\hyperlink{class_mtrx}{Mtrx}} \&right)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора($\ast$). Выполнение операции умножения 2ух матриц. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a6b0bbbbad412259af01fc6f1f6445389}{operator$\ast$}} (float multiplication\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора($\ast$). Выполнение операции умножения матрицы на вещественное число. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a7c16477dbcdf750a962ba9117807e70e}{operator$\ast$=}} (float multiplication\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора($\ast$=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a2b3c69c6e537f8e58f1c482a64affdaa}{operator/}} (float division\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(/). Выполнение операции деления матрицы на вещественное число. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a30907d14b4c9a907d5d07165eb952350}{operator/=}} (float division\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора(/=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{class_mtrx}{Mtrx}} \mbox{\hyperlink{class_mtrx_a345a31e62915ed73daabe532bb7c2338}{operator$^\wedge$}} (int involution\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора($^\wedge$). Выполнение операции возведения в степень матрицы. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  \end{DoxyCompactList}\item 
+const void \mbox{\hyperlink{class_mtrx_a9281013e2ed934a0dacd63d2fe463934}{operator$^\wedge$=}} (int involution\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Перегрузка оператора($^\wedge$=). Выполнение операции возведения в степень матрицы. Результат выполения записывается в текущую матрицу. ~\newline
+  \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mtrx_aed8e64ddfeee96ff5d40f837c31f9374}{determinant}} ()
+\begin{DoxyCompactList}\small\item\em Метод по вычислению определителя(детерминанта) матрицы. Результатом станет вещественное число.  \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mtrx_a56b7569790a36013752a427486edf7f2}{M\+\_\+normal\+\_\+mtrx}} ()
+\begin{DoxyCompactList}\small\item\em Метод по вычислению M-\/нормы матрицы. Результатом станет вещественное число.  \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mtrx_abe0e0608213d234731d5aaf362621b75}{L\+\_\+normal\+\_\+mtrx}} ()
+\begin{DoxyCompactList}\small\item\em Метод по вычислению L-\/нормы матрицы. Результатом станет вещественное число.  \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{class_mtrx_abdc064394e87b87569b5f1caf9e7149f}{K\+\_\+normal\+\_\+mtrx}} ()
+\begin{DoxyCompactList}\small\item\em Метод по вычислению K-\/нормы матрицы. Результатом станет вещественное число.  \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс вещественной матрицы 
+
+Данный класс содержит методы по сложению, вычитанию, умножению, делению матриц, также вычисления детермината и норм матрицы. 
+
+\doxysubsection{Методы}
+\mbox{\Hypertarget{class_mtrx_aed8e64ddfeee96ff5d40f837c31f9374}\label{class_mtrx_aed8e64ddfeee96ff5d40f837c31f9374}} 
+\index{Mtrx@{Mtrx}!determinant@{determinant}}
+\index{determinant@{determinant}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{determinant()}{determinant()}}
+{\footnotesize\ttfamily float Mtrx\+::determinant (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод по вычислению определителя(детерминанта) матрицы. Результатом станет вещественное число.  
+
+\begin{DoxyReturn}{Возвращает}
+float determinant
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a25f517d9f74a38e0bfa7b42ca252857b}\label{class_mtrx_a25f517d9f74a38e0bfa7b42ca252857b}} 
+\index{Mtrx@{Mtrx}!init@{init}}
+\index{init@{init}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void Mtrx\+::init (\begin{DoxyParamCaption}\item[{const vector$<$ float $>$ \&}]{input\+\_\+values,  }\item[{const int \&}]{size\+\_\+y,  }\item[{const int \&}]{size\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+Метод предназначен для инициализации матрицы.  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em input\+\_\+values} & Массив вещественных чисел для заполнения матрицы.\\
+\hline
+{\em size\+\_\+y} & Количество строк матрицы.\\
+\hline
+{\em size\+\_\+x} & Количество столбцов матрицы.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_abdc064394e87b87569b5f1caf9e7149f}\label{class_mtrx_abdc064394e87b87569b5f1caf9e7149f}} 
+\index{Mtrx@{Mtrx}!K\_normal\_mtrx@{K\_normal\_mtrx}}
+\index{K\_normal\_mtrx@{K\_normal\_mtrx}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{K\_normal\_mtrx()}{K\_normal\_mtrx()}}
+{\footnotesize\ttfamily float Mtrx\+::\+K\+\_\+normal\+\_\+mtrx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод по вычислению K-\/нормы матрицы. Результатом станет вещественное число.  
+
+\begin{DoxyReturn}{Возвращает}
+float K\+\_\+norm
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_abe0e0608213d234731d5aaf362621b75}\label{class_mtrx_abe0e0608213d234731d5aaf362621b75}} 
+\index{Mtrx@{Mtrx}!L\_normal\_mtrx@{L\_normal\_mtrx}}
+\index{L\_normal\_mtrx@{L\_normal\_mtrx}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{L\_normal\_mtrx()}{L\_normal\_mtrx()}}
+{\footnotesize\ttfamily float Mtrx\+::\+L\+\_\+normal\+\_\+mtrx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод по вычислению L-\/нормы матрицы. Результатом станет вещественное число.  
+
+\begin{DoxyReturn}{Возвращает}
+float L\+\_\+norm
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a56b7569790a36013752a427486edf7f2}\label{class_mtrx_a56b7569790a36013752a427486edf7f2}} 
+\index{Mtrx@{Mtrx}!M\_normal\_mtrx@{M\_normal\_mtrx}}
+\index{M\_normal\_mtrx@{M\_normal\_mtrx}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{M\_normal\_mtrx()}{M\_normal\_mtrx()}}
+{\footnotesize\ttfamily float Mtrx\+::\+M\+\_\+normal\+\_\+mtrx (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Метод по вычислению M-\/нормы матрицы. Результатом станет вещественное число.  
+
+\begin{DoxyReturn}{Возвращает}
+float M\+\_\+norm
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a6b0bbbbad412259af01fc6f1f6445389}\label{class_mtrx_a6b0bbbbad412259af01fc6f1f6445389}} 
+\index{Mtrx@{Mtrx}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{float}]{multiplication\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора($\ast$). Выполнение операции умножения матрицы на вещественное число. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em multiplication\+\_\+value} & Передача в метод,вещественного числа для выполнения операции произведения.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} multiplication\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_afad1a3c0ada04891756fb3f4bfe4cce9}\label{class_mtrx_afad1a3c0ada04891756fb3f4bfe4cce9}} 
+\index{Mtrx@{Mtrx}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mtrx}{Mtrx}} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора($\ast$). Выполнение операции умножения 2ух матриц. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em right} & Передача в метод, второй матрицы для выполнения операции произведения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} multiplication\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a7c16477dbcdf750a962ba9117807e70e}\label{class_mtrx_a7c16477dbcdf750a962ba9117807e70e}} 
+\index{Mtrx@{Mtrx}!operator$\ast$=@{operator$\ast$=}}
+\index{operator$\ast$=@{operator$\ast$=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$=()}{operator*=()}}
+{\footnotesize\ttfamily const void Mtrx\+::operator$\ast$= (\begin{DoxyParamCaption}\item[{float}]{multiplication\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора($\ast$=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em multiplication\+\_\+value} & Передача в метод,вещественного числа для выполнения операции произведения.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_aacf9e5a02b3ba06fa186660418d80a02}\label{class_mtrx_aacf9e5a02b3ba06fa186660418d80a02}} 
+\index{Mtrx@{Mtrx}!operator+@{operator+}}
+\index{operator+@{operator+}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator+ (\begin{DoxyParamCaption}\item[{float}]{addition\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em addition\+\_\+value} & Передача в метод,вещественного числа для выполнения операции сложения.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} addition\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a134a1ba04bf2b6237c80e339f9612615}\label{class_mtrx_a134a1ba04bf2b6237c80e339f9612615}} 
+\index{Mtrx@{Mtrx}!operator+@{operator+}}
+\index{operator+@{operator+}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator+ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mtrx}{Mtrx}} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(+). Выполнение операции сложения 2ух матриц. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em right} & Передача в метод, второй матрицы для выполнения операции сложения. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} sum\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a10883827de34757406db77aa957681d9}\label{class_mtrx_a10883827de34757406db77aa957681d9}} 
+\index{Mtrx@{Mtrx}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const void Mtrx\+::operator+= (\begin{DoxyParamCaption}\item[{float}]{addition\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(+). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em addition\+\_\+value} & Передача в метод,вещественного числа для выполнения операции сложения.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_a799a0f86f056e0e5783ef3f39b9fbba1}\label{class_mtrx_a799a0f86f056e0e5783ef3f39b9fbba1}} 
+\index{Mtrx@{Mtrx}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const void Mtrx\+::operator+= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mtrx}{Mtrx}} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(+=). Выполнение операции сложения 2ух матриц. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em right} & Передача в метод, второй матрицы для выполнения операции сложения.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_aee41326ad5c25327801067007551c8f7}\label{class_mtrx_aee41326ad5c25327801067007551c8f7}} 
+\index{Mtrx@{Mtrx}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator-\/ (\begin{DoxyParamCaption}\item[{float}]{difference\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(-\/). Выполнение операации вычитания из матрицы вещественного числа. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em difference\+\_\+value} & Передача в метод,вещественного числа для выполнения операции вычитания\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} difference\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a7b2614a2633ab006a77871b30c920cfd}\label{class_mtrx_a7b2614a2633ab006a77871b30c920cfd}} 
+\index{Mtrx@{Mtrx}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator-\/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mtrx}{Mtrx}} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(-\/). Выполнение операции вычитания 2ух матриц. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em right} & Передача в метод, второй матрицы для выполнения операции вычитания.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} difference\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a3346aa10a4673b33152b7bbfde25c835}\label{class_mtrx_a3346aa10a4673b33152b7bbfde25c835}} 
+\index{Mtrx@{Mtrx}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily const void Mtrx\+::operator-\/= (\begin{DoxyParamCaption}\item[{float}]{difference\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(-\/=). Выполнение операации сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em difference\+\_\+value} & Передача в метод,вещественного числа для выполнения операции вычитания\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_a5f40085c7d7f1603af49f1af906abf8f}\label{class_mtrx_a5f40085c7d7f1603af49f1af906abf8f}} 
+\index{Mtrx@{Mtrx}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator-\/=()}{operator-=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily const void Mtrx\+::operator-\/= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_mtrx}{Mtrx}} \&}]{right }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(-\/=). Выполнение операции вычитания 2ух матриц. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em right} & Передача в метод, второй матрицы для выполнения операции вычитания.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_a2b3c69c6e537f8e58f1c482a64affdaa}\label{class_mtrx_a2b3c69c6e537f8e58f1c482a64affdaa}} 
+\index{Mtrx@{Mtrx}!operator/@{operator/}}
+\index{operator/@{operator/}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator/ (\begin{DoxyParamCaption}\item[{float}]{division\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(/). Выполнение операции деления матрицы на вещественное число. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em division\+\_\+value} & Передача в метод,вещественного числа для выполнения операции деления.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} division\+\_\+res
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a30907d14b4c9a907d5d07165eb952350}\label{class_mtrx_a30907d14b4c9a907d5d07165eb952350}} 
+\index{Mtrx@{Mtrx}!operator/=@{operator/=}}
+\index{operator/=@{operator/=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator/=()}{operator/=()}}
+{\footnotesize\ttfamily const void Mtrx\+::operator/= (\begin{DoxyParamCaption}\item[{float}]{division\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора(/=). Выполнение операции сложения матрицы и вещественного числа. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em division\+\_\+value} & Передача в метод,вещественного числа для выполнения операции деления.\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_mtrx_a345a31e62915ed73daabe532bb7c2338}\label{class_mtrx_a345a31e62915ed73daabe532bb7c2338}} 
+\index{Mtrx@{Mtrx}!operator$^\wedge$@{operator$^\wedge$}}
+\index{operator$^\wedge$@{operator$^\wedge$}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator$^\wedge$()}{operator^()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{class_mtrx}{Mtrx}} Mtrx\+::operator$^\wedge$ (\begin{DoxyParamCaption}\item[{int}]{involution\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора($^\wedge$). Выполнение операции возведения в степень матрицы. Результатом выполнения станет новый объект класса \mbox{\hyperlink{class_mtrx}{Mtrx}}, матрица С(результат).  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em involution\+\_\+value} & Передача в метод,целого числа для выполнения операции возведения в степень\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+\mbox{\hyperlink{class_mtrx}{Mtrx}} res\+\_\+mtrx
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_mtrx_a9281013e2ed934a0dacd63d2fe463934}\label{class_mtrx_a9281013e2ed934a0dacd63d2fe463934}} 
+\index{Mtrx@{Mtrx}!operator$^\wedge$=@{operator$^\wedge$=}}
+\index{operator$^\wedge$=@{operator$^\wedge$=}!Mtrx@{Mtrx}}
+\doxysubsubsection{\texorpdfstring{operator$^\wedge$=()}{operator^=()}}
+{\footnotesize\ttfamily const void Mtrx\+::operator$^\wedge$= (\begin{DoxyParamCaption}\item[{int}]{involution\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Перегрузка оператора($^\wedge$=). Выполнение операции возведения в степень матрицы. Результат выполения записывается в текущую матрицу. ~\newline
+  
+
+
+\begin{DoxyParams}{Аргументы}
+{\em involution\+\_\+value} & Передача в метод,вещественного числа для выполнения операции возведения в степень.\\
+\hline
+\end{DoxyParams}
+
+
+Объявления и описания членов классов находятся в файлах\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_mtrx_header_8h}{Mtrx\+Header.\+h}}\item 
+Mtrx\+\_\+\+Class.\+cpp\end{DoxyCompactItemize}

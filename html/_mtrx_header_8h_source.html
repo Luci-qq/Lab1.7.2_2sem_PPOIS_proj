@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.5"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lab1.7.2: Исходный файл MtrxHeader.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Lab1.7.2
+   </div>
+   <div id="projectbrief">C++</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.5 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">MtrxHeader.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_mtrx_header_8h.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#pragma once</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">using </span>std::vector;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="class_mtrx.html">   17</a></span><span class="keyword">class </span><a class="code hl_class" href="class_mtrx.html">Mtrx</a></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>{</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keyword">private</span>: </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    vector&lt;vector&lt;float&gt;&gt; mtrx;</div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keywordtype">float</span> determinant_utility(vector&lt;vector&lt;float&gt;&gt;&amp; mtrx, <span class="keywordtype">int</span> mtrx_size);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <span class="keywordtype">void</span> subMatrix(vector&lt;vector&lt;float&gt;&gt;&amp; mtrx, vector&lt;vector&lt;float&gt;&gt;&amp; temp, <span class="keywordtype">int</span> p, <span class="keywordtype">int</span> q, <span class="keywordtype">int</span> n);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">int</span> get_y_size();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keywordtype">int</span> get_x_size();</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">float</span> get_elm_by_index(<span class="keywordtype">int</span> x_index, <span class="keywordtype">int</span> y_index);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keywordtype">void</span> set_elm_by_index(<span class="keywordtype">int</span>&amp; x_index, <span class="keywordtype">int</span>&amp; y_index, <span class="keywordtype">float</span>&amp; elm);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    vector&lt;vector&lt;float&gt;&gt; get_current_mtrx();</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    vector&lt;float&gt; get_line_by_index(<span class="keywordtype">int</span> y_index);</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    vector&lt;float&gt; get_column_by_index(<span class="keywordtype">int</span> x_index);</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a25f517d9f74a38e0bfa7b42ca252857b">init</a>(<span class="keyword">const</span> vector&lt;float&gt;&amp; input_values, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; size_y, <span class="keyword">const</span> <span class="keywordtype">int</span>&amp; size_x);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a50119a57936a0675a7d3965dca97e8f5">print_mtrx</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a0b7ed78df4f1fe2da15f2fdb23c24104">clear_current_mtrx</a>();</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#a134a1ba04bf2b6237c80e339f9612615">operator+</a>(<a class="code hl_class" href="class_mtrx.html">Mtrx</a>&amp; right);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a799a0f86f056e0e5783ef3f39b9fbba1">operator+=</a>(<a class="code hl_class" href="class_mtrx.html">Mtrx</a>&amp; right);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#a7b2614a2633ab006a77871b30c920cfd">operator-</a>(<a class="code hl_class" href="class_mtrx.html">Mtrx</a>&amp; right);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a5f40085c7d7f1603af49f1af906abf8f">operator-=</a>(<a class="code hl_class" href="class_mtrx.html">Mtrx</a>&amp; right);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#a134a1ba04bf2b6237c80e339f9612615">operator+</a>(<span class="keywordtype">float</span> addition_value);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a799a0f86f056e0e5783ef3f39b9fbba1">operator+=</a>(<span class="keywordtype">float</span> addition_value);</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#a7b2614a2633ab006a77871b30c920cfd">operator-</a>(<span class="keywordtype">float</span> difference_value);</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a5f40085c7d7f1603af49f1af906abf8f">operator-=</a>(<span class="keywordtype">float</span> difference_value);</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordtype">bool</span> check_multiplication_possibility(<a class="code hl_class" href="class_mtrx.html">Mtrx</a>&amp; right);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#afad1a3c0ada04891756fb3f4bfe4cce9">operator*</a>(<a class="code hl_class" href="class_mtrx.html">Mtrx</a>&amp; right);</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#afad1a3c0ada04891756fb3f4bfe4cce9">operator*</a>(<span class="keywordtype">float</span> multiplication_value);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a7c16477dbcdf750a962ba9117807e70e">operator*=</a>(<span class="keywordtype">float</span> multiplication_value);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#a2b3c69c6e537f8e58f1c482a64affdaa">operator/</a>(<span class="keywordtype">float</span> division_value);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a30907d14b4c9a907d5d07165eb952350">operator/=</a>(<span class="keywordtype">float</span> division_value);</div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keyword">const</span> <a class="code hl_class" href="class_mtrx.html">Mtrx</a> <a class="code hl_function" href="class_mtrx.html#a345a31e62915ed73daabe532bb7c2338">operator^</a>(<span class="keywordtype">int</span> involution_value);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <span class="keyword">const</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_mtrx.html#a9281013e2ed934a0dacd63d2fe463934">operator^=</a>(<span class="keywordtype">int</span> involution_value);</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_mtrx.html#aed8e64ddfeee96ff5d40f837c31f9374">determinant</a>();</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_mtrx.html#a56b7569790a36013752a427486edf7f2">M_normal_mtrx</a>();</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_mtrx.html#abe0e0608213d234731d5aaf362621b75">L_normal_mtrx</a>();</div>
+<div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="class_mtrx.html#abdc064394e87b87569b5f1caf9e7149f">K_normal_mtrx</a>();</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>};</div>
+<div class="ttc" id="aclass_mtrx_html"><div class="ttname"><a href="class_mtrx.html">Mtrx</a></div><div class="ttdoc">Класс вещественной матрицы</div><div class="ttdef"><b>Definition:</b> MtrxHeader.h:18</div></div>
+<div class="ttc" id="aclass_mtrx_html_a0b7ed78df4f1fe2da15f2fdb23c24104"><div class="ttname"><a href="class_mtrx.html#a0b7ed78df4f1fe2da15f2fdb23c24104">Mtrx::clear_current_mtrx</a></div><div class="ttdeci">void clear_current_mtrx()</div><div class="ttdoc">Очистка текущей матрицы.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:55</div></div>
+<div class="ttc" id="aclass_mtrx_html_a134a1ba04bf2b6237c80e339f9612615"><div class="ttname"><a href="class_mtrx.html#a134a1ba04bf2b6237c80e339f9612615">Mtrx::operator+</a></div><div class="ttdeci">const Mtrx operator+(Mtrx &amp;right)</div><div class="ttdoc">Перегрузка оператора(+). Выполнение операции сложения 2ух матриц. Результатом выполнения станет новый...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:113</div></div>
+<div class="ttc" id="aclass_mtrx_html_a25f517d9f74a38e0bfa7b42ca252857b"><div class="ttname"><a href="class_mtrx.html#a25f517d9f74a38e0bfa7b42ca252857b">Mtrx::init</a></div><div class="ttdeci">void init(const vector&lt; float &gt; &amp;input_values, const int &amp;size_y, const int &amp;size_x)</div><div class="ttdoc">Метод предназначен для инициализации матрицы.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:39</div></div>
+<div class="ttc" id="aclass_mtrx_html_a2b3c69c6e537f8e58f1c482a64affdaa"><div class="ttname"><a href="class_mtrx.html#a2b3c69c6e537f8e58f1c482a64affdaa">Mtrx::operator/</a></div><div class="ttdeci">const Mtrx operator/(float division_value)</div><div class="ttdoc">Перегрузка оператора(/). Выполнение операции деления матрицы на вещественное число....</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:268</div></div>
+<div class="ttc" id="aclass_mtrx_html_a30907d14b4c9a907d5d07165eb952350"><div class="ttname"><a href="class_mtrx.html#a30907d14b4c9a907d5d07165eb952350">Mtrx::operator/=</a></div><div class="ttdeci">const void operator/=(float division_value)</div><div class="ttdoc">Перегрузка оператора(/=). Выполнение операции сложения матрицы и вещественного числа....</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:281</div></div>
+<div class="ttc" id="aclass_mtrx_html_a345a31e62915ed73daabe532bb7c2338"><div class="ttname"><a href="class_mtrx.html#a345a31e62915ed73daabe532bb7c2338">Mtrx::operator^</a></div><div class="ttdeci">const Mtrx operator^(int involution_value)</div><div class="ttdoc">Перегрузка оператора(^). Выполнение операции возведения в степень матрицы. Результатом выполнения ста...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:292</div></div>
+<div class="ttc" id="aclass_mtrx_html_a50119a57936a0675a7d3965dca97e8f5"><div class="ttname"><a href="class_mtrx.html#a50119a57936a0675a7d3965dca97e8f5">Mtrx::print_mtrx</a></div><div class="ttdeci">void print_mtrx()</div><div class="ttdoc">Вывод матрицы на экран.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:60</div></div>
+<div class="ttc" id="aclass_mtrx_html_a56b7569790a36013752a427486edf7f2"><div class="ttname"><a href="class_mtrx.html#a56b7569790a36013752a427486edf7f2">Mtrx::M_normal_mtrx</a></div><div class="ttdeci">float M_normal_mtrx()</div><div class="ttdoc">Метод по вычислению M-нормы матрицы. Результатом станет вещественное число.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:323</div></div>
+<div class="ttc" id="aclass_mtrx_html_a5f40085c7d7f1603af49f1af906abf8f"><div class="ttname"><a href="class_mtrx.html#a5f40085c7d7f1603af49f1af906abf8f">Mtrx::operator-=</a></div><div class="ttdeci">const void operator-=(Mtrx &amp;right)</div><div class="ttdoc">Перегрузка оператора(-=). Выполнение операции вычитания 2ух матриц. Результат выполения записывается ...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:150</div></div>
+<div class="ttc" id="aclass_mtrx_html_a799a0f86f056e0e5783ef3f39b9fbba1"><div class="ttname"><a href="class_mtrx.html#a799a0f86f056e0e5783ef3f39b9fbba1">Mtrx::operator+=</a></div><div class="ttdeci">const void operator+=(Mtrx &amp;right)</div><div class="ttdoc">Перегрузка оператора(+=). Выполнение операции сложения 2ух матриц. Результат выполения записывается в...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:126</div></div>
+<div class="ttc" id="aclass_mtrx_html_a7b2614a2633ab006a77871b30c920cfd"><div class="ttname"><a href="class_mtrx.html#a7b2614a2633ab006a77871b30c920cfd">Mtrx::operator-</a></div><div class="ttdeci">const Mtrx operator-(Mtrx &amp;right)</div><div class="ttdoc">Перегрузка оператора(-). Выполнение операции вычитания 2ух матриц. Результатом выполнения станет новы...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:137</div></div>
+<div class="ttc" id="aclass_mtrx_html_a7c16477dbcdf750a962ba9117807e70e"><div class="ttname"><a href="class_mtrx.html#a7c16477dbcdf750a962ba9117807e70e">Mtrx::operator*=</a></div><div class="ttdeci">const void operator*=(float multiplication_value)</div><div class="ttdoc">Перегрузка оператора(*=). Выполнение операции сложения матрицы и вещественного числа....</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:257</div></div>
+<div class="ttc" id="aclass_mtrx_html_a9281013e2ed934a0dacd63d2fe463934"><div class="ttname"><a href="class_mtrx.html#a9281013e2ed934a0dacd63d2fe463934">Mtrx::operator^=</a></div><div class="ttdeci">const void operator^=(int involution_value)</div><div class="ttdoc">Перегрузка оператора(^=). Выполнение операции возведения в степень матрицы. Результат выполения запис...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:304</div></div>
+<div class="ttc" id="aclass_mtrx_html_abdc064394e87b87569b5f1caf9e7149f"><div class="ttname"><a href="class_mtrx.html#abdc064394e87b87569b5f1caf9e7149f">Mtrx::K_normal_mtrx</a></div><div class="ttdeci">float K_normal_mtrx()</div><div class="ttdoc">Метод по вычислению K-нормы матрицы. Результатом станет вещественное число.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:363</div></div>
+<div class="ttc" id="aclass_mtrx_html_abe0e0608213d234731d5aaf362621b75"><div class="ttname"><a href="class_mtrx.html#abe0e0608213d234731d5aaf362621b75">Mtrx::L_normal_mtrx</a></div><div class="ttdeci">float L_normal_mtrx()</div><div class="ttdoc">Метод по вычислению L-нормы матрицы. Результатом станет вещественное число.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:343</div></div>
+<div class="ttc" id="aclass_mtrx_html_aed8e64ddfeee96ff5d40f837c31f9374"><div class="ttname"><a href="class_mtrx.html#aed8e64ddfeee96ff5d40f837c31f9374">Mtrx::determinant</a></div><div class="ttdeci">float determinant()</div><div class="ttdoc">Метод по вычислению определителя(детерминанта) матрицы. Результатом станет вещественное число.</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:316</div></div>
+<div class="ttc" id="aclass_mtrx_html_afad1a3c0ada04891756fb3f4bfe4cce9"><div class="ttname"><a href="class_mtrx.html#afad1a3c0ada04891756fb3f4bfe4cce9">Mtrx::operator*</a></div><div class="ttdeci">const Mtrx operator*(Mtrx &amp;right)</div><div class="ttdoc">Перегрузка оператора(*). Выполнение операции умножения 2ух матриц. Результатом выполнения станет новы...</div><div class="ttdef"><b>Definition:</b> Mtrx_Class.cpp:217</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+</small></address>
+</body>
+</html>

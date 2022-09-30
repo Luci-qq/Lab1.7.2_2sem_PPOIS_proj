@@ -1,5 +1,5 @@
-#include "MtrxHeader.h"
 
+#include "MtrxHeader.h"
 float Mtrx::determinant_utility(vector<vector<float>>& mtrx, int mtrx_size) {
 	float determinant = 0;
 	if (mtrx_size == 1) {
@@ -112,15 +112,15 @@ vector<float> Mtrx::get_column_by_index(int x_index)
 //mtrx sum+
 const Mtrx Mtrx::operator+(Mtrx& right)
 {
-	Mtrx sum_res;
+	Mtrx addition_res;
 	vector<float> result_values;
 	for (int y = 0; y < this->get_y_size(); ++y)
 		for (int x = 0; x < this->get_x_size(); ++x)
 		{
 			result_values.push_back(this->get_elm_by_index(x, y) + right.get_elm_by_index(x, y));
 		}
-	sum_res.init(result_values, this->get_x_size(), right.get_y_size());
-	return sum_res;
+	addition_res.init(result_values, this->get_x_size(), right.get_y_size());
+	return addition_res;
 }
 //mtrx sum+=
 const void Mtrx::operator+=(Mtrx& right)
@@ -160,15 +160,15 @@ const void Mtrx::operator-=(Mtrx& right)
 //mtrx sum+(value)
 const Mtrx Mtrx::operator+(float addition_value)
 {
-	Mtrx sum_res;
+	Mtrx addition_res;
 	vector<float> result_values;
 	for (int y = 0; y < this->get_y_size(); ++y)
 		for (int x = 0; x < this->get_x_size(); ++x)
 		{
 			result_values.push_back(this->get_elm_by_index(x, y) + addition_value);
 		}
-	sum_res.init(result_values, this->get_x_size(), this->get_y_size());
-	return sum_res;
+	addition_res.init(result_values, this->get_x_size(), this->get_y_size());
+	return addition_res;
 }
 //mtrx sum+=(value)
 const void Mtrx::operator+=(float addition_value)
@@ -267,15 +267,15 @@ const void Mtrx::operator*=(float multiplication_value)
 //mtrx division/(value)
 const Mtrx Mtrx::operator/(float division_value)
 {
-	Mtrx difference_res;
+	Mtrx division_res;
 	vector<float> result_values;
 	for (int y = 0; y < this->get_y_size(); ++y)
 		for (int x = 0; x < this->get_x_size(); ++x)
 		{
 			result_values.push_back(this->get_elm_by_index(x, y) / division_value);
 		}
-	difference_res.init(result_values, this->get_x_size(), this->get_y_size());
-	return difference_res;
+	division_res.init(result_values, this->get_x_size(), this->get_y_size());
+	return division_res;
 }
 //mtrx multiplication*=(value)
 const void Mtrx::operator/=(float division_value)
@@ -316,8 +316,8 @@ const void Mtrx::operator^=(int involution_value)
 float Mtrx::determinant()
 {
 	vector<vector<float>> mtrx = this->get_current_mtrx();
-	float res = determinant_utility(mtrx, mtrx.size());
-	return res;
+	float determinant = determinant_utility(mtrx, mtrx.size());
+	return determinant;
 }
 
 float Mtrx::M_normal_mtrx()
@@ -333,11 +333,11 @@ float Mtrx::M_normal_mtrx()
 		}
 		values.push_back(value);
 	}
-	float res = values[0];
+	float M_norm = values[0];
 	for (int i = 1; i < values.size(); ++i)
-		if (res < values[i])
-			res = values[i];
-	return res;
+		if (M_norm < values[i])
+			M_norm = values[i];
+	return M_norm;
 }
 
 float Mtrx::L_normal_mtrx()
@@ -353,11 +353,11 @@ float Mtrx::L_normal_mtrx()
 		}
 		values.push_back(value);
 	}
-	float res = values[0];
+	float L_norm = values[0];
 	for (int i = 1; i < values.size(); ++i)
-		if (res < values[i])
-			res = values[i];
-	return res;
+		if (L_norm < values[i])
+			L_norm = values[i];
+	return L_norm;
 }
 
 float Mtrx::K_normal_mtrx()
@@ -373,8 +373,8 @@ float Mtrx::K_normal_mtrx()
 		}
 		values.push_back(value);
 	}
-	float res = 0;
+	float K_norm = 0;
 	for (int i = 0; i < values.size(); ++i)
-		res += values[i];
-	return sqrt(res);
+		K_norm += values[i];
+	return sqrt(K_norm);
 }
